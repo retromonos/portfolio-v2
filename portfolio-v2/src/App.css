@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+#root {
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  background-image: url(earth_orbit.png);
+  background-size: cover;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 25 XThin';
+  src: url('assets/fonts/HaasGrotDisp-25XThin.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-25XThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 35';
+  src: url('assets/fonts/HaasGrotDisp-36ThinItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-36ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 25 XThin';
+  src: url('assets/fonts/HaasGrotDisp-26XThinItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-26XThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 45';
+  src: url('assets/fonts/HaasGrotDisp-46LightItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-46LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 15 XXThin';
+  src: url('assets/fonts/HaasGrotDisp-16XXThinItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-16XXThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 35';
+  src: url('assets/fonts/HaasGrotDisp-35Thin.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-35Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 55 Roman';
+  src: url('assets/fonts/HaasGrotDisp-55Roman.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-55Roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 15 XXThin';
+  src: url('assets/fonts/HaasGrotDisp-15XXThin.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-15XXThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 45';
+  src: url('assets/fonts/HaasGrotDisp-45Light.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-45Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 75';
+  src: url('assets/fonts/HaasGrotDisp-75Bold.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-75Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 15 XXThin';
+  src: url('assets/fonts/HaasGrotDispR-16XXThinItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-16XXThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 75';
+  src: url('assets/fonts/HaasGrotDisp-76BoldItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-76BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 25 XThin';
+  src: url('assets/fonts/HaasGrotDispR-25XThin.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-25XThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 55 Roman';
+  src: url('assets/fonts/HaasGrotDisp-56Italic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-56Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 65';
+  src: url('assets/fonts/HaasGrotDisp-66MediumItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-66MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 95';
+  src: url('assets/fonts/HaasGrotDisp-95Black.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-95Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 95';
+  src: url('assets/fonts/HaasGrotDisp-96BlackItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-96BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 15 XXThin';
+  src: url('assets/fonts/HaasGrotDispR-15XXThin.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-15XXThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp 65';
+  src: url('assets/fonts/HaasGrotDisp-65Medium.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDisp-65Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 65';
+  src: url('assets/fonts/HaasGrotDispR-66MediumItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-66MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 45';
+  src: url('assets/fonts/HaasGrotDispR-46LightItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-46LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 55 Roman';
+  src: url('assets/fonts/HaasGrotDispR-55Roman.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-55Roman.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 25 XThin';
+  src: url('assets/fonts/HaasGrotDispR-26XThinItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-26XThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 35';
+  src: url('assets/fonts/HaasGrotDispR-35Thin.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-35Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 35';
+  src: url('assets/fonts/HaasGrotDispR-36ThinItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-36ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 65';
+  src: url('assets/fonts/HaasGrotDispR-65Medium.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-65Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 45';
+  src: url('assets/fonts/HaasGrotDispR-45Light.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-45Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 55 Roman';
+  src: url('assets/fonts/HaasGrotDispR-56Italic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-56Italic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 75';
+  src: url('assets/fonts/HaasGrotDispR-76BoldItalic.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-76BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Haas Grot Disp R 75';
+  src: url('assets/fonts/HaasGrotDispR-75Bold.woff2') format('woff2'),
+      url('assets/fonts/HaasGrotDispR-75Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-haas-grot-disp-65: 'Haas Grot Disp 65';
+  --font-haas-grot-disp-75: 'Haas Grot Disp 75';
+  --font-haas-grot-disp-95: 'Haas Grot Disp 95';
+  --font-haas-grot-disp-15-xx-thin: 'Haas Grot Disp 15 XXThin';
+  --font-haas-grot-disp-25-x-thin: 'Haas Grot Disp 25 XThin';
+  --font-haas-grot-disp-35: 'Haas Grot Disp 35';
+  --font-haas-grot-disp-45: 'Haas Grot Disp 45';
+  --font-haas-grot-disp-55-roman: 'Haas Grot Disp 55 Roman';
+  --font-haas-grot-disp-65: 'Haas Grot Disp 65';
+  --font-haas-grot-disp-75: 'Haas Grot Disp 75';
+}
