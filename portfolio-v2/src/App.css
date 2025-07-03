@@ -2,10 +2,9 @@
 
 #root {
   height: 100vh;
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
-  background-image: url(earth_orbit.png);
-  background-size: cover;
+
 }
 
 .logo {
@@ -325,4 +324,14 @@
   --font-haas-grot-disp-55-roman: 'Haas Grot Disp 55 Roman';
   --font-haas-grot-disp-65: 'Haas Grot Disp 65';
   --font-haas-grot-disp-75: 'Haas Grot Disp 75';
+
+  --animate-small-ping: ping2 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+
+  @keyframes ping2 {
+    75%, 100% {
+      transform: scale(1.05, 1.4);
+      opacity: 0;
+    }
+  }
 }
+
