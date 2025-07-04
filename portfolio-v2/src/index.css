@@ -35,7 +35,7 @@ h1 {
 
 button {
   border-radius: 0px;
-  border: 1px solid #dedede;
+  border: 1px solid #c2c2c2;
   background-color: #00000041;
   cursor: pointer;
   color: #dedede;
@@ -43,7 +43,7 @@ button {
 }
 
 button:hover {
-  background-color: #3939397a;
+  background-color: #7a7a7a7a;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,36 +1,10 @@
 import { ChevronDownIcon } from "lucide-react";
 import * as THREE from 'three';
-import { createRoot } from 'react-dom/client'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useMemo, useRef } from "react";
 //bg-[url(earth_orbit.png)] 
 
 const earthPos = new THREE.Vector3(2.5, -7, 0)
-
-const glowVertexShader = `
-    uniform vec3 viewVector;
-    uniform float c;
-    uniform float p;
-    varying float intensity;
-    void main() 
-    {
-        vec3 vNormal = normalize( normalMatrix * normal );
-        vec3 vNormel = normalize( normalMatrix * viewVector );
-        intensity = pow( c - dot(vNormal, vNormel), p );
-        
-        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-    }
-    `
-
-const glowFragShader = `
-    uniform vec3 glowColor;
-    varying float intensity;
-    void main() 
-    {
-        vec3 glow = glowColor * intensity;
-        gl_FragColor = vec4( glow, 1.0 );
-    }
-    `
 
 const loader = new THREE.TextureLoader();
 const glowCircle = loader.load( '/glowCircle.png' );
@@ -61,8 +35,8 @@ export function Title()
     <div className="size-full relative">    
          <div id="3input" className="absolute size-full z-0">
             <Canvas className="size-full" scene={scene}>
-                <ambientLight intensity={2} />
-                <directionalLight color="yellow" isDirectionalLight intensity={2} position={[-24.3,8.5,-20]} target={targetObject} />
+                <ambientLight color="#c9e6f5" intensity={1} />
+                <directionalLight color="#ffdfab" isDirectionalLight intensity={100} position={[-24.3,8.5,-20]} target={targetObject} />
                 
                 <sprite scale={64} position={[-24.3,8.5,-20]}>
                     <spriteMaterial opacity={0.35} map={glowCircle2} color="#ffcd7d" blending={THREE.AdditiveBlending} transparent={true} />
@@ -113,14 +87,8 @@ export function Earth()
     const earthRef = useRef<THREE.Mesh>(null)
     const cloudRef = useRef<THREE.Mesh>(null)
 
-    const glowUniforms = useMemo(()=>({
-            glowColor: { type: "vec3", value: new THREE.Color("#80f2ff") },
-            viewVector: { type: "vec3", value: new THREE.Vector3(0,0,0) },
-            c: { type: "float", value: 0.05 },
-            p: { type: "float", value: 4.5}
-    }), [])
 
-    useFrame((state, dt)=>{
+    useFrame((_state, dt)=>{
         if(!earthRef.current || !cloudRef.current) return
 
         earthRef.current.rotation.y = (earthRef.current.rotation.y + .01 * dt) % (2*Math.PI)
@@ -144,18 +112,18 @@ export function Earth()
     return(
         <mesh position={earthPos} rotation={[0,0,0.25]}>
             <sprite scale={21} position={[0,0,1.5]} renderOrder={0}>
-                <spriteMaterial map={glowCircle2} color="#00a2ff" blending={THREE.AdditiveBlending} transparent={true} />
+                <spriteMaterial map={glowCircle2} color="#0066ff" blending={THREE.AdditiveBlending} transparent={true} />
             </sprite>
             <sprite scale={16.125} position={[0,0,2]} renderOrder={0}>
-                <spriteMaterial map={glowCircle} color="#00fff7" blending={THREE.AdditiveBlending} transparent={true} />
+                <spriteMaterial map={glowCircle} color="#00eaff" blending={THREE.AdditiveBlending} transparent={true} />
             </sprite>
             <mesh>
                 <mesh scale={8} ref={earthRef}>
-                    <sphereGeometry args={[1, 64, 64]} />
+                    <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}} />
                     <meshPhongMaterial map={earthTexture} side={THREE.FrontSide} specular={new THREE.Color("#fffb7d")} specularMap={earthSpecular} normalMap={earthNormal} />
                 </mesh>
                 <mesh scale={8.01} ref={cloudRef}>
-                    <sphereGeometry args={[1, 64, 64]}/>
+                    <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}}/>
                     <meshStandardMaterial map={cloudTexture} side={THREE.FrontSide} blending={THREE.AdditiveBlending} alphaMap={cloudTexture} transparent={true}/>
                 </mesh>
             </mesh>
