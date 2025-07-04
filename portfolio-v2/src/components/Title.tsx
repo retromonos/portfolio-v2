@@ -35,8 +35,8 @@ export function Title()
     <div className="size-full relative">    
          <div id="3input" className="absolute size-full z-0">
             <Canvas className="size-full" scene={scene}>
-                <ambientLight color="#c9e6f5" intensity={1} />
-                <directionalLight color="#ffdfab" isDirectionalLight intensity={100} position={[-24.3,8.5,-20]} target={targetObject} />
+                <ambientLight color="#fff3e0" intensity={2} />
+                <directionalLight color="#ffdfab" isDirectionalLight intensity={5} position={[-24.3,8.5,-20]} target={targetObject} />
                 
                 <sprite scale={64} position={[-24.3,8.5,-20]}>
                     <spriteMaterial opacity={0.35} map={glowCircle2} color="#ffcd7d" blending={THREE.AdditiveBlending} transparent={true} />
@@ -58,7 +58,7 @@ export function Title()
                 </div>
             </div>
             <div>
-                <button className="bg-white text-2xl px-16 py-2 rounded-md relative font-(family-name:--font-haas-grot-disp-45) tracking-[0.25em]">
+                <button onClick={()=>document.getElementById('maindoc')?.scrollIntoView()} className="bg-white text-2xl px-16 py-2 rounded-md relative font-(family-name:--font-haas-grot-disp-45) tracking-[0.25em]">
                     <div className='absolute top-0 left-0 w-full h-full outline animate-small-ping outline-offset-0 hover:animate-none hover:outline-offset-4'></div>
                     OPEN PORTFOLIO
                 </button>
@@ -111,12 +111,7 @@ export function Earth()
     */
     return(
         <mesh position={earthPos} rotation={[0,0,0.25]}>
-            <sprite scale={21} position={[0,0,1.5]} renderOrder={0}>
-                <spriteMaterial map={glowCircle2} color="#0066ff" blending={THREE.AdditiveBlending} transparent={true} />
-            </sprite>
-            <sprite scale={16.125} position={[0,0,2]} renderOrder={0}>
-                <spriteMaterial map={glowCircle} color="#00eaff" blending={THREE.AdditiveBlending} transparent={true} />
-            </sprite>
+            
             <mesh>
                 <mesh scale={8} ref={earthRef}>
                     <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}} />
@@ -124,9 +119,15 @@ export function Earth()
                 </mesh>
                 <mesh scale={8.01} ref={cloudRef}>
                     <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}}/>
-                    <meshStandardMaterial map={cloudTexture} side={THREE.FrontSide} blending={THREE.AdditiveBlending} alphaMap={cloudTexture} transparent={true}/>
+                    <meshStandardMaterial map={cloudTexture} side={THREE.FrontSide} blending={THREE.MultiplyBlending} transparent={true}/>
                 </mesh>
             </mesh>
+            <sprite scale={21} position={[0,0,1.5]} renderOrder={0}>
+                <spriteMaterial map={glowCircle2} color="#0066ff" blending={THREE.AdditiveBlending} transparent={true} />
+            </sprite>
+            <sprite scale={16.125} position={[0,0,2]} renderOrder={0}>
+                <spriteMaterial map={glowCircle} color="#00eaff" blending={THREE.AdditiveBlending} transparent={true} />
+            </sprite>
         </mesh>
     )
 }
