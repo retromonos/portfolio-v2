@@ -1,5 +1,5 @@
 import { CornerLeftUp } from "lucide-react";
-import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import { MouseParallaxContainer } from "react-parallax-mouse";
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useState } from "react";
 import { Information } from "./pages/Information";
