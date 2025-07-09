@@ -17,7 +17,7 @@ glowCircle2.colorSpace = THREE.SRGBColorSpace;
 export function Title()
 {
     const [openMain, setOpenMain] = useState(false)
-    const [z, setZ] = useState(0)
+    const [z, setZ] = useState("z-0")
 
     const loader = new THREE.TextureLoader();
     const starTexture = loader.load( '/2k_stars_milky_way.jpg' );
@@ -53,15 +53,16 @@ export function Title()
     }, [scene])
 
     useEffect(()=>{
+        console.log(openMain)
         if(openMain)
-            setZ(30)
+            setZ("z-30")
         else
-            setTimeout(()=>setZ(0), 300)
+            setTimeout(()=>setZ("z-0"), 300)
     },[openMain])
 
     return(
     <MouseParallaxContainer className="size-full relative" globalFactorX={0.025} globalFactorY={0.025}>
-        <div className={`size-full absolute top-0 left-0 z-${z} transition-opacity duration-300 opacity-${!openMain ? "0" : "100"}`}>
+        <div className={`size-full absolute top-0 left-0 ${z} transition-opacity duration-300 ${!openMain ? "opacity-0" : "opacity-100"}`}>
             <MainDoc reset={()=>setOpenMain(false)}/>
         </div>
         <div id="3input" className="absolute size-full z-10">
