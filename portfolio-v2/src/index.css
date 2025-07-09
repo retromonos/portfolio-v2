@@ -25,12 +25,8 @@ h1 {
 }
 
 button {
-  border-radius: 0px;
-  border: 1px solid #c2c2c2;
-  background-color: #00000041;
   cursor: pointer;
-  color: #dedede;
-  transition: border-color 0.25s;
+  transition: border-color background-color 0.25s;
 }
 
 button:hover {

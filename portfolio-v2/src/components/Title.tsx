@@ -1,7 +1,9 @@
 import { ChevronDownIcon } from "lucide-react";
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import { MainDoc } from "./MainDoc";
 //bg-[url(earth_orbit.png)] 
 
 const earthPos = new THREE.Vector3(2.5, -7, 0)
@@ -14,6 +16,9 @@ glowCircle2.colorSpace = THREE.SRGBColorSpace;
 
 export function Title()
 {
+    const [openMain, setOpenMain] = useState(false)
+    const [z, setZ] = useState(0)
+
     const loader = new THREE.TextureLoader();
     const starTexture = loader.load( '/2k_stars_milky_way.jpg' );
     starTexture.colorSpace = THREE.SRGBColorSpace;
@@ -27,16 +32,11 @@ export function Title()
         return scene
     }, [])
 
-    const targetObject = new THREE.Object3D();
-    targetObject.position.copy(earthPos);
-    scene.add(targetObject);
-
-    return(
-    <div className="size-full relative">    
-         <div id="3input" className="absolute size-full z-0">
+    const canvas = useMemo(()=>{
+        return(
             <Canvas className="size-full" scene={scene}>
                 <ambientLight color="#fff3e0" intensity={2} />
-                <directionalLight color="#ffdfab" isDirectionalLight intensity={5} position={[-24.3,8.5,-20]} target={targetObject} />
+                <directionalLight color="#ffdfab" isDirectionalLight intensity={3} position={[-24.3,8.5,-20]} />
                 
                 <sprite scale={64} position={[-24.3,8.5,-20]}>
                     <spriteMaterial opacity={0.35} map={glowCircle2} color="#ffcd7d" blending={THREE.AdditiveBlending} transparent={true} />
@@ -49,23 +49,42 @@ export function Title()
                 </sprite>
                 <Earth/>
             </Canvas>
+        )
+    }, [scene])
+
+    useEffect(()=>{
+        if(openMain)
+            setZ(30)
+        else
+            setTimeout(()=>setZ(0), 300)
+    },[openMain])
+
+    return(
+    <MouseParallaxContainer className="size-full relative" globalFactorX={0.025} globalFactorY={0.025}>
+        <div className={`size-full absolute top-0 left-0 z-${z} transition-opacity duration-300 opacity-${!openMain ? "0" : "100"}`}>
+            <MainDoc reset={()=>setOpenMain(false)}/>
         </div>
-        <div className="flex absolute z-10 flex-col items-center justify-center size-full bg-transparent p-8">
-            <div className="flex flex-col items-end text-[80px] text-right size-full font-(family-name:--font-haas-grot-disp-65)">
+        <div id="3input" className="absolute size-full z-10">
+            {canvas}
+        </div>
+        <div className="flex absolute z-20 flex-col items-center justify-center size-full bg-transparent p-8">
+            <MouseParallaxChild className="flex flex-col items-end text-[60px] sm:text-[80px] text-right size-full font-(family-name:--font-haas-grot-disp-65)">
                 <div className='w-fit'>Luke Cullen</div>
                 <div className="text-[30px] border-t text-right size-full w-fit pt-2 font-(family-name:--font-haas-grot-disp-55-roman)">
                     Software Engineer | Designer | Full Stack Developer
                 </div>
-            </div>
-            <div>
-                <button onClick={()=>document.getElementById('maindoc')?.scrollIntoView()} className="bg-white text-2xl px-16 py-2 rounded-md relative font-(family-name:--font-haas-grot-disp-45) tracking-[0.25em]">
+            </MouseParallaxChild>
+            <MouseParallaxChild>
+                <button id="parallax" onClick={()=>setOpenMain(true)} 
+                className="bg-[#0000008a] text-2xl px-16 py-2 text-[#dedede] border border-[#c2c2c2] relative font-(family-name:--font-haas-grot-disp-45) tracking-[0.25em]">
                     <div className='absolute top-0 left-0 w-full h-full outline animate-small-ping outline-offset-0 hover:animate-none hover:outline-offset-4'></div>
                     OPEN PORTFOLIO
                 </button>
-            </div>
-            <ChevronDownIcon className='mt-8' />
+                <ChevronDownIcon className='mx-auto mt-4' />
+            </MouseParallaxChild>
+            
         </div>
-    </div>
+    </MouseParallaxContainer>
     )
 }
 
@@ -93,7 +112,6 @@ export function Earth()
 
         earthRef.current.rotation.y = (earthRef.current.rotation.y + .01 * dt) % (2*Math.PI)
         cloudRef.current.rotation.y = (cloudRef.current.rotation.y + .02 * dt) % (2*Math.PI)
-        console.log(earthRef.current.rotation)
     })
 
 /*
@@ -119,7 +137,7 @@ export function Earth()
                 </mesh>
                 <mesh scale={8.01} ref={cloudRef}>
                     <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}}/>
-                    <meshStandardMaterial map={cloudTexture} side={THREE.FrontSide} blending={THREE.MultiplyBlending} transparent={true}/>
+                    <meshStandardMaterial map={cloudTexture} side={THREE.FrontSide} blending={THREE.AdditiveBlending} transparent={true}/>
                 </mesh>
             </mesh>
             <sprite scale={21} position={[0,0,1.5]} renderOrder={0}>

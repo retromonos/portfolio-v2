@@ -326,12 +326,18 @@
   --font-haas-grot-disp-75: 'Haas Grot Disp 75';
 
   --animate-small-ping: ping2 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-fade: fade 1s cubic-bezier(0, 0, 0.2, 1) 1;
 
   @keyframes ping2 {
     75%, 100% {
       transform: scale(1.05, 1.4);
       opacity: 0;
     }
+  }
+
+  @keyframes fade {
+    from {opacity: 0;}
+    to from {opacity: 1;}
   }
 }
 
