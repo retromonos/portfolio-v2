@@ -1,13 +1,15 @@
-[
-    {
-        "name": "Lootcode",
-        "time": "2/24 - 5/24",
-        "description": "Test",
-        "rarity": "Exotic",
-        "tools": ["React", "Clerk", "TypeScript", "MySQL", "Zx Shell", "Docker", "tRPC"],
-        "images": [
-            "profile_temp.png",
-            "earth_orbit.png"
-        ]
-    }
-]
+{
+    "projects": [
+        {
+            "name": "Lootcode",
+            "time": "2/24 - 5/24",
+            "description": "Test",
+            "rarity": "Exotic",
+            "tools": ["React", "Clerk", "TypeScript", "MySQL", "Zx Shell", "Docker", "tRPC"],
+            "images": [
+                "profile_temp.png",
+                "earth_orbit.png"
+            ]
+        }
+    ]
+}
