@@ -3,6 +3,7 @@ import { MouseParallaxContainer } from "react-parallax-mouse";
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useState } from "react";
 import { Information } from "./pages/Information";
+import { Projects } from "./pages/Projects";
 
 export function MainDoc({reset}:{reset:()=>void})
 {
@@ -29,7 +30,7 @@ export function MainDoc({reset}:{reset:()=>void})
                     </div>
                     {
                     page == 0 ? <Information/> : 
-                    page == 1 ? <div>Projects</div> :
+                    page == 1 ? <Projects/> :
                     page == 2 ? <div>Photos</div> : <div/>
                     }
                 </div>
