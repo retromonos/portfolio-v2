@@ -3,11 +3,11 @@
         {
             "name": "Lootcode",
             "time": "2/24 - 5/24",
-            "description": "Test",
-            "rarity": "Exotic",
+            "description": "A fantasy themed, highly-interactive Data Structures and Algorithms study suite. Features not only dozens of coding problems to solve, but also heavy gamification, with lore and loot to collect as you progress on your journey.",
+            "rarity": "Legendary",
             "tools": ["React", "Clerk", "TypeScript", "MySQL", "Zx Shell", "Docker", "tRPC"],
             "images": [
-                "profile_temp.png",
+                "lootcode-final.png",
                 "earth_orbit.png"
             ]
         }
