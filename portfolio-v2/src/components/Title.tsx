@@ -36,7 +36,7 @@ export function Title()
         return(
             <Canvas className="size-full" scene={scene}>
                 <ambientLight color="#fff3e0" intensity={2} />
-                <directionalLight color="#ffdfab" isDirectionalLight intensity={3} position={[-24.3,8.5,-20]} />
+                <directionalLight color="#ffdfab" isDirectionalLight intensity={2} position={[-24.3,8.5,-20]} />
                 
                 <sprite scale={64} position={[-24.3,8.5,-20]}>
                     <spriteMaterial opacity={0.35} map={glowCircle2} color="#ffcd7d" blending={THREE.AdditiveBlending} transparent={true} />
@@ -92,14 +92,14 @@ export function Title()
 export function Earth()
 {
     
-    const earthTexture = loader.load( '/8k_earth_daymap.jpg' );
+    const earthTexture = loader.load( '/8k_earth_daymap.webp' );
     earthTexture.colorSpace = THREE.SRGBColorSpace;
     const earthNormal = loader.load( '/8k_earth_normal_map.tif' );
     earthNormal.colorSpace = THREE.SRGBColorSpace;
     const earthSpecular = loader.load( '/8k_earth_specular_map.tif' );
     earthSpecular.colorSpace = THREE.SRGBColorSpace;
 
-    const cloudTexture = loader.load( '/8k_earth_clouds.jpg' );
+    const cloudTexture = loader.load( '/8k_earth_clouds.webp' );
     cloudTexture.colorSpace = THREE.SRGBColorSpace;
 
 
@@ -134,7 +134,7 @@ export function Earth()
             <mesh>
                 <mesh scale={8} ref={earthRef}>
                     <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}} />
-                    <meshPhongMaterial map={earthTexture} side={THREE.FrontSide} specular={new THREE.Color("#fffb7d")} specularMap={earthSpecular} normalMap={earthNormal} />
+                    <meshPhongMaterial map={earthTexture} side={THREE.FrontSide} specular={new THREE.Color("#fffb7d")} />
                 </mesh>
                 <mesh scale={8.01} ref={cloudRef}>
                     <sphereGeometry args={[1, 64, 64]} computeVertexNormals={()=>{}}/>

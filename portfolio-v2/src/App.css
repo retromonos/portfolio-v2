@@ -313,10 +313,6 @@
   font-display: swap;
 }
 
-.tooltip {
-  background-color: rgba(0, 0, 0, 0)
-}
-
 @theme {
   --font-haas-grot-disp-65: 'Haas Grot Disp 65';
   --font-haas-grot-disp-75: 'Haas Grot Disp 75';
