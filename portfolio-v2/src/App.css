@@ -313,6 +313,9 @@
   font-display: swap;
 }
 
+@source inline("bg-uncommon");
+@source inline("bg-rare");
+@source inline("bg-legendary");
 @theme {
   --font-haas-grot-disp-65: 'Haas Grot Disp 65';
   --font-haas-grot-disp-75: 'Haas Grot Disp 75';
@@ -324,6 +327,10 @@
   --font-haas-grot-disp-55-roman: 'Haas Grot Disp 55 Roman';
   --font-haas-grot-disp-65: 'Haas Grot Disp 65';
   --font-haas-grot-disp-75: 'Haas Grot Disp 75';
+
+  --color-uncommon: #336b3e;
+  --color-rare: #567e9d;
+  --color-legendary: #4f3663;
 
   --animate-small-ping: ping2 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-fade: fade 1s cubic-bezier(0, 0, 0.2, 1) 1;

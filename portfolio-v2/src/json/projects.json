@@ -3,11 +3,63 @@
         {
             "name": "Lootcode",
             "time": "2/24 - 5/24",
+            "link": "https://www.lootcode.dev",
             "description": "A fantasy themed, highly-interactive Data Structures and Algorithms study suite. Features not only dozens of coding problems to solve, but also heavy gamification, with lore and loot to collect as you progress on your journey.",
             "rarity": "Legendary",
-            "tools": ["React", "Clerk", "TypeScript", "MySQL", "Zx Shell", "Docker", "tRPC"],
+            "tools": ["React", "Tailwind", "Clerk", "TypeScript", "MySQL", "Zx Shell", "Docker", "tRPC", "Prisma"],
             "images": [
-                "lootcode-final.png",
+                "lootcode_logo.webp",
+                "lootcode1.png",
+                "lootcode2.png",
+                "lootcode3.png",
+                "lootcode4.png"
+            ]
+        },
+        {
+            "name": "CodeJoust",
+            "time": "2/25 - 5/25",
+            "link": "https://play.codejoust.xyz",
+            "description": "CodeJoust is a competitive programming platform that allows you to duel your friends from over hundreds of available problems, while also featuring matchmaking and an in-depth ranking system, motivating you to play just one more round. CodeJoust also features numerous abilities that help add extra strategy and stand it apart from the competition.",
+            "rarity": "Rare",
+            "tools": ["React", "Tailwind", "JWT", "TypeScript", "MongoDB", "Websockets", "ExpressJS", "Resend"],
+            "images": [
+                "codejoust_logo.webp",
+                "earth_orbit.png"
+            ]
+        },
+        {
+            "name": "Voiceboard",
+            "time": "9/24 - 9/24",
+            "link": "https://voiceboard.app",
+            "description": "~\u00A0FIRST PLACE for Google's Hack for Social Good Challenge at Shellhacks 2024\u00A0~\nVoiceboard utilizes Google Gemini to make whiteboarding \"accessible for all\" by converting your speech to detailed, context-aware diagrams.",
+            "rarity": "Uncommon",
+            "tools": ["React", "Tailwind", "TypeScript", "Google Gemini", "Mermaid", "Excalidraw"],
+            "images": [
+                "voiceboard.webp",
+                "earth_orbit.png"
+            ]
+        },
+        {
+            "name": "AirJam",
+            "time": "4/25 - 4/25",
+            "link": "https://play.airjam.studio",
+            "description": "AirJam allows you to explore music without ever having to pick up an instrument; using OpenCV, we convert your hand movements to notes on dozens of instruments, with controls to set tempos and swap instrument groups on the fly, without ever having to pick up a guitar.",
+            "rarity": "Rare",
+            "tools": ["React", "Tailwind", "TypeScript", "Python", "OpenCV", "Websockets", "MediaPipe"],
+            "images": [
+                "airjam.png",
+                "airjam1.png"
+            ]
+        },
+        {
+            "name": "DenTraceX",
+            "time": "5/25 - Present",
+            "link": "https://www.instagram.com/dentracex/",
+            "description": "Non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains. In active production, we are authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible.",
+            "rarity": "Rare",
+            "tools": ["React", "Tailwind", "TypeScript", "MySQL", "JWT", "ExpressJS", "Prisma"],
+            "images": [
+                "dentracex.jpg",
                 "earth_orbit.png"
             ]
         }
