@@ -3,16 +3,12 @@ import { mapArray } from "../../main";
 export function Tools()
 {
     return(
-        <div className="flex flex-row size-full gap-1">
-            <button className="h-full w-4 bg-zinc-500 text-zinc-50">{"<"}</button>
-            <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll gap-2 grid grid-cols-4 grid-rows-7 justify-center h-fit">
-            {
-                mapArray(28, 0).map(()=>{
-                    return(<div className="bg-zinc-900 size-20"></div>)
-                })
-            }
-            </div>
-            <button className="h-full w-4 bg-zinc-500 text-zinc-50">{">"}</button>
+        <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll gap-2 flex flex-wrap flex-row justify-start size-fit">
+        {
+            mapArray(8, 0).map(()=>{
+                return(<div className="bg-zinc-900 size-20"></div>)
+            })
+        }
         </div>
     )
 }

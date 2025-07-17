@@ -29,19 +29,19 @@
         },
         {
             "name": "Voiceboard",
-            "time": "9/24 - 9/24",
+            "time": "9/24 - ShellHacks 2024",
             "link": "https://voiceboard.app",
             "description": "~\u00A0FIRST PLACE for Google's Hack for Social Good Challenge at Shellhacks 2024\u00A0~\nVoiceboard utilizes Google Gemini to make whiteboarding \"accessible for all\" by converting your speech to detailed, context-aware diagrams.",
             "rarity": "Uncommon",
             "tools": ["React", "Tailwind", "TypeScript", "Google Gemini", "Mermaid", "Excalidraw"],
             "images": [
                 "voiceboard.webp",
-                "earth_orbit.png"
+                "voiceboard1.png"
             ]
         },
         {
             "name": "AirJam",
-            "time": "4/25 - 4/25",
+            "time": "4/25 - HackUCF 2025",
             "link": "https://play.airjam.studio",
             "description": "AirJam allows you to explore music without ever having to pick up an instrument; using OpenCV, we convert your hand movements to notes on dozens of instruments, with controls to set tempos and swap instrument groups on the fly, without ever having to pick up a guitar.",
             "rarity": "Rare",

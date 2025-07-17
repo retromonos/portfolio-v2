@@ -1,4 +1,4 @@
-import { CornerLeftUp } from "lucide-react";
+import { Camera, CornerLeftUp, Info, Wrench } from "lucide-react";
 import { MouseParallaxContainer } from "react-parallax-mouse";
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useState } from "react";
@@ -9,7 +9,7 @@ export function MainDoc({reset}:{reset:()=>void})
 {
     useHotkeys('esc', reset)
 
-    const [page, setPage] = useState(0)
+    const [page, setPage] = useState(1)
 
     return(
         <div id="maindoc" className="bg-gray-950 size-full p-4 pt-2">
@@ -17,15 +17,24 @@ export function MainDoc({reset}:{reset:()=>void})
                 <div className="flex flex-col gap-4 w-full">
                     <div className="flex flex-row gap-8 w-full justify-between text-[#dedede]">
                         <button onClick={reset} className="text-lg text-right tracking-wider border border-[#c2c2c2] outline-[#c2c2c2] outline-offset-0 px-2 py-1 hover:outline hover:outline-offset-4">
-                            <div className="flex flex-row gap-1">
+                            <div className="flex flex-row gap-1 p-1">
                                 <CornerLeftUp/>
-                                ESC
+                                <div className="hidden md:block">ESC</div>
                             </div>
                         </button>
                         <div className="flex flex-row gap-8">
-                            <button onClick={()=>setPage(0)} className={`${page == 0 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>INFORMATION</button>
-                            <button onClick={()=>setPage(1)} className={`${page == 1 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>PROJECTS</button>
-                            <button onClick={()=>setPage(2)} className={`${page == 2 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>PHOTOS</button>
+                            <button onClick={()=>setPage(0)} className={`${page == 0 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
+                                <div className="hidden md:block">INFORMATION</div>
+                                <Info className="md:hidden"/>
+                            </button>
+                            <button onClick={()=>setPage(1)} className={`${page == 1 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
+                                <div className="hidden md:block">PROJECTS</div>
+                                <Wrench className="md:hidden"/>
+                            </button>
+                            <button onClick={()=>setPage(2)} className={`${page == 2 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
+                                <div className="hidden md:block">PHOTOS</div>
+                                <Camera className="md:hidden"/>
+                            </button>
                         </div>
                     </div>
                     {
