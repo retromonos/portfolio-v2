@@ -71,7 +71,7 @@ export function Title()
         <div className="flex absolute z-20 flex-col items-center justify-center size-full bg-transparent p-8">
             <MouseParallaxChild className="flex flex-col items-end text-[60px] sm:text-[80px] text-right size-full font-(family-name:--font-haas-grot-disp-65)">
                 <div className='w-fit'>Luke Cullen</div>
-                <div className="text-[30px] border-t text-right size-full w-fit pt-2 font-(family-name:--font-haas-grot-disp-55-roman)">
+                <div className="text-[18px] sm:text-[24px] md:text-[30px] border-t text-right size-full w-fit pt-2 font-(family-name:--font-haas-grot-disp-55-roman)">
                     Software Engineer | Designer | Full Stack Developer
                 </div>
             </MouseParallaxChild>

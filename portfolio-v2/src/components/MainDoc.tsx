@@ -12,10 +12,10 @@ export function MainDoc({reset}:{reset:()=>void})
     const [page, setPage] = useState(1)
 
     return(
-        <div id="maindoc" className="bg-gray-950 size-full p-4 pt-2">
-            <MouseParallaxContainer globalFactorX={0.025} globalFactorY={0.025} className="border-2 border-gray-700 size-full flex flex-row p-8 font-(family-name:--font-haas-grot-disp-65)">
+        <div id="maindoc" className="bg-gray-950 size-full p-0 sm:p-2">
+            <MouseParallaxContainer globalFactorX={0.025} globalFactorY={0.025} className="border-0 sm:border-2 border-gray-700 size-full flex flex-row p-0 sm:p-2 lg:p-8 font-(family-name:--font-haas-grot-disp-65)">
                 <div className="flex flex-col gap-4 w-full">
-                    <div className="flex flex-row gap-8 w-full justify-between text-[#dedede]">
+                    <div className="flex flex-row gap-8 w-full justify-between text-[#dedede] p-2">
                         <button onClick={reset} className="text-lg text-right tracking-wider border border-[#c2c2c2] outline-[#c2c2c2] outline-offset-0 px-2 py-1 hover:outline hover:outline-offset-4">
                             <div className="flex flex-row gap-1 p-1">
                                 <CornerLeftUp/>
