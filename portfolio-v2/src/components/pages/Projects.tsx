@@ -26,9 +26,9 @@ export function Projects()
 
     return(
         <MouseParallaxChild className="flex flex-col lg:grid lg:grid-cols-3 gap-8 size-full p-0 sm:p-2 overflow-y-scroll lg:overflow-auto">
-            <div className="size-full h-fit lg:h-full col-span-2 lg:overflow-y-scroll">
+            <div className="size-full h-fit lg:h-full p-4 sm:p-0 col-span-2 lg:overflow-y-scroll">
                 <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide pl-2 sticky -top-2 lg:top-0 w-full bg-gray-950">PROJECTS</div>
-                <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) p-2 flex flex-col 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-4 gap-2 size-full h-fit">
+                <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) p-2 flex flex-col 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-4 gap-8 sm:gap-2 size-full h-fit">
                 {
                     mapArray(8, 0).map((v)=>{
 
@@ -39,11 +39,11 @@ export function Projects()
                         else
                         return(
                             <>
-                                <div id={"project"+v} onClick={()=>{selected != v && setSelected(v)}} className={`justify-start min-h-[40rem] ${v == selected && "row-span-4"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
+                                <div id={"project"+v} onClick={()=>{selected != v && setSelected(v)}} className={`justify-start ${v == selected && "row-span-4"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
                                     <div className={`text-left flex flex-row gap-4 p-2 ${rarityColors[p?.rarity] || "bg-rare"} ${v == selected ? (xlRarityColors[p?.rarity] || "2xl:bg-rare") : "2xl:bg-zinc-800 2xl:cursor-pointer 2xl:hover:bg-[#7a7a7a7a]"}`}>
-                                        <img className="w-32 h-32 border border-zinc-700 bg-zinc-900 " src={p.images[0]}/>
-                                        <div className="flex flex-col gap-2 w-full overflow-x-scroll">
-                                            <div className="text-2xl tracking-wide flex flex-row gap-2">
+                                        <img className="size-24 sm:size-32 border border-zinc-700 bg-zinc-900 " src={p.images[0]}/>
+                                        <div className="flex flex-col gap-1 sm:gap-2 w-full overflow-x-scroll">
+                                            <div className="text-lg sm:text-2xl tracking-wide flex flex-row gap-2">
                                                 {p?.name}
                                                 <button onClick={()=>setSelected(-1)} className={`my-auto hidden ${v == selected && "2xl:block"}`}>
                                                     <ChevronUp className="size-6"/>
@@ -53,8 +53,8 @@ export function Projects()
                                             <div className={`flex flex-col gap-2 w-full ${v != selected && "2xl:hidden"}`}>
                                                 {
                                                 p.link != "" ?
-                                                <a href={p.link} target="_blank" className="text-xl tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 text-zinc-300 flex flex-row w-fit p-2 gap-2">
-                                                   <Globe className="my-auto size-6"/>
+                                                <a href={p.link} target="_blank" className="text-base sm:text-xl tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 text-zinc-300 flex flex-row w-fit p-1 sm:p-2 gap-2">
+                                                   <Globe className="my-auto size-4 sm:size-6"/>
                                                    {p?.link.replace("https://", "")}
                                                 </a>
                                                 :
@@ -63,19 +63,19 @@ export function Projects()
                                                     No link yet.
                                                 </div>
                                                 }
-                                                <div className="text-xl font-(family-name:--font-haas-grot-disp-55-roman)">{p.time}</div>
+                                                <div className="text-base sm:text-xl font-(family-name:--font-haas-grot-disp-55-roman)">{p.time}</div>
                                             </div>
                                             
                                         </div>
                                     </div>
                                     <div className={`block ${v == selected ? "2xl:block" : "2xl:hidden"}`}>
-                                        <div className="text-xl/normal tracking-wide p-4 text-zinc-300 whitespace-pre-wrap font-(family-name:--font-haas-grot-disp-55-roman)">
+                                        <div className="text-base sm:text-xl/normal tracking-wide p-4 text-zinc-300 whitespace-pre-wrap font-(family-name:--font-haas-grot-disp-55-roman)">
                                             {p.description}
                                         </div>
                                         <div className="grid grid-cols-2 w-full">
                                             <div className="w-full p-4 pt-0">
-                                                <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-xl">TOOLS:</div>
-                                                <div className="text-lg flex flex-col w-full gap-0.5 text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
+                                                <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-lg sm:text-xl">TOOLS:</div>
+                                                <div className="text-sm sm:text-lg flex flex-col w-full gap-0.5 text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
                                                 {
                                                     p.tools.map((v)=>{
                                                         return(
@@ -88,7 +88,7 @@ export function Projects()
                                                 </div>
                                             </div>
                                             <div className="w-full p-4 pt-0">
-                                                <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-xl">IMAGES:</div>
+                                                <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-lg sm:text-xl">IMAGES:</div>
                                                 <ImageSelector images={p.images}/>
                                             </div>
                                         </div>
