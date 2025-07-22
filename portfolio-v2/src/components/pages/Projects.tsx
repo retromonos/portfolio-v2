@@ -1,9 +1,9 @@
 import { MouseParallaxChild } from "react-parallax-mouse";
-import { Tools } from "./Tools";
+import { ToolInfo, Tools } from "./Tools";
 import { mapArray } from "../../main";
 import { projects } from "../../json/projects.json"
 import { Tooltip } from "react-tooltip";
-import { ChevronUp, Globe, Mouse } from "lucide-react";
+import { Calendar, ChevronUp, Globe, Mouse } from "lucide-react";
 import { useState } from "react";
 import { ImageSelector } from "../ImageSelector";
 
@@ -27,8 +27,8 @@ export function Projects()
     return(
         <MouseParallaxChild className="flex flex-col lg:grid lg:grid-cols-3 gap-8 size-full p-0 sm:p-2 overflow-y-scroll lg:overflow-auto">
             <div className="size-full h-fit lg:h-full p-4 sm:p-0 col-span-2 lg:overflow-y-scroll">
-                <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide pl-2 sticky -top-2 lg:top-0 w-full bg-gray-950">PROJECTS</div>
-                <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) p-2 flex flex-col 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-4 gap-8 sm:gap-2 size-full h-fit">
+                <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide sm:pl-2 sticky -top-2 lg:top-0 w-full bg-gray-950">PROJECTS</div>
+                <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) p-0 pt-2 sm:p-2 flex flex-col 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-4 gap-8 sm:gap-2 size-full h-fit">
                 {
                     mapArray(8, 0).map((v)=>{
 
@@ -63,7 +63,10 @@ export function Projects()
                                                     No link yet.
                                                 </div>
                                                 }
-                                                <div className="text-base sm:text-xl font-(family-name:--font-haas-grot-disp-55-roman)">{p.time}</div>
+                                                <div className="flex flex-row gap-1 text-base sm:text-xl text-zinc-300 font-(family-name:--font-haas-grot-disp-55-roman)">
+                                                    <Calendar className="my-auto size-4"/>
+                                                    {p.time}
+                                                </div>
                                             </div>
                                             
                                         </div>
@@ -80,7 +83,7 @@ export function Projects()
                                                     p.tools.map((v)=>{
                                                         return(
                                                         <div className="flex flex-row gap-2">
-                                                            <img className="size-6 my-auto" src="profile_temp.png"/>
+                                                            <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/missing.webp"}/>
                                                             {v}
                                                         </div>)
                                                     })
@@ -94,13 +97,16 @@ export function Projects()
                                         </div>
                                     </div>
                                 </div>
-                                <div className="absolute hidden 2xl:block">
-                                <Tooltip disableStyleInjection style={{backgroundColor: "rgb(0,0,0,0)", padding: 0}} anchorSelect={"#project"+v} float noArrow place="right" opacity={v == selected ? 0 : 1}>
+                                <div className="absolute hidden z-50 2xl:block">
+                                <Tooltip delayHide={0} delayShow={0} disableStyleInjection style={{backgroundColor: "rgb(0,0,0,0)", padding: 0}} anchorSelect={"#project"+v} float noArrow place="right" opacity={v == selected ? 0 : 1}>
                                         <div className="flex flex-col w-96 bg-zinc-800/90">
                                             <div className={`${rarityColors[p.rarity] || "bg-rare"} font-(family-name:--font-haas-grot-disp-65) text-3xl p-4 pb-2`}>
                                                 {p.name.toUpperCase()}
                                                 <div className="text-xl/normal tracking-wide text-zinc-300 font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row w-full justify-between">
-                                                    <div>{p.time}</div>
+                                                    <div className="flex flex-row gap-1">
+                                                        <Calendar className="my-auto size-4"/>
+                                                        {p.time}
+                                                    </div>
                                                     <div>{p.rarity}</div>
                                                 </div>
                                             </div>
@@ -111,7 +117,7 @@ export function Projects()
                                                 p.tools.map((v)=>{
                                                     return(
                                                     <div className="flex flex-row gap-2">
-                                                        <img className="size-6 my-auto" src="profile_temp.png"/>
+                                                        <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/bullet.webp"}/>
                                                         {v}
                                                     </div>)
                                                 })
@@ -131,8 +137,7 @@ export function Projects()
                 </div>
             </div>
             
-            <div className="size-full h-fit lg:h-full lg:overflow-y-scroll">
-                <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide pl-2 sticky -top-2 lg:top-0 w-full bg-gray-950">TOOLS</div>
+            <div className="size-full h-fit lg:h-full lg:overflow-y-scroll p-4 sm:p-0">
                 <Tools/>
             </div>
         </MouseParallaxChild>
