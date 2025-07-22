@@ -24,6 +24,10 @@ h1 {
   line-height: 1.1;
 }
 
+ul {
+  list-style: inside;
+}
+
 button {
   cursor: pointer;
   transition: border-color background-color 0.25s;

@@ -1,0 +1,64 @@
+{
+    "jobs": [
+        {
+            "name": "KnightHacks",
+            "title": "Hackathon Organizer",
+            "rarity": "Legendary",
+            "description": "Test",
+            "time": "7/25 - Present",
+            "links": [
+                "https://club.knighthacks.org/"
+            ],
+            "location": "Orlando, FL",
+            "logo": "knighthacks.jpg",
+            "bullets": [
+                "A",
+                "B"
+            ],
+            "skills": [
+                "x",
+                "y"
+            ]
+        },
+        {
+            "name": "DenTraceX",
+            "title": "Lead Developer, VP",
+            "rarity": "Rare",
+            "description": "DenTraceX is a Florida non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains. My main role as Lead Developer is the implementation of the entire organization's tech stack, such as our database, security, and client-facing webpages. While we are not active yet, we are targeting a launch by September 2025.",
+            "time": "5/25 - Present",
+            "links": [
+                "https://www.instagram.com/dentracex/"
+            ],
+            "location": "Orlando, FL",
+            "logo": "dentracex.jpg",
+            "bullets": [
+                "Authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible",
+                "Working with a team of diverse disciplines to process and handle sensitive medical information"
+            ],
+            "skills": [
+                "x",
+                "y"
+            ]
+        },
+        {
+            "name": "Publix Super Markets",
+            "title": "Cashier",
+            "rarity": "Uncommon",
+            "description": "Test",
+            "time": "2/23 - Present",
+            "links": [
+                "https://corporate.publix.com/"
+            ],
+            "location": "Orlando, FL",
+            "logo": "Publix_Retail_Logo.png",
+            "bullets": [
+                "A",
+                "B"
+            ],
+            "skills": [
+                "x",
+                "y"
+            ]
+        }
+    ]
+}

@@ -1,15 +1,16 @@
-import { Camera, CornerLeftUp, Info, Wrench } from "lucide-react";
+import { Briefcase, Camera, CornerLeftUp, Info, Wrench } from "lucide-react";
 import { MouseParallaxContainer } from "react-parallax-mouse";
 import { useHotkeys } from 'react-hotkeys-hook'
 import { useState } from "react";
 import { Information } from "./pages/Information";
 import { Projects } from "./pages/Projects";
+import { Experience } from "./pages/Experience";
 
 export function MainDoc({reset}:{reset:()=>void})
 {
     useHotkeys('esc', reset)
 
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(0)
 
     return(
         <div id="maindoc" className="bg-gray-950 size-full p-0 sm:p-2">
@@ -24,23 +25,28 @@ export function MainDoc({reset}:{reset:()=>void})
                         </button>
                         <div className="flex flex-row gap-8">
                             <button onClick={()=>setPage(0)} className={`${page == 0 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
-                                <div className="hidden md:block">INFORMATION</div>
+                                <div className="hidden md:block">INFO</div>
                                 <Info className="md:hidden"/>
                             </button>
                             <button onClick={()=>setPage(1)} className={`${page == 1 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
+                                <div className="hidden md:block">EXPERIENCE</div>
+                                <Briefcase className="md:hidden"/>
+                            </button>
+                            <button onClick={()=>setPage(2)} className={`${page == 2 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
                                 <div className="hidden md:block">PROJECTS</div>
                                 <Wrench className="md:hidden"/>
                             </button>
-                            <button onClick={()=>setPage(2)} className={`${page == 2 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
-                                <div className="hidden md:block">PHOTOS</div>
+                            <button onClick={()=>setPage(3)} className={`${page == 3 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
+                                <div className="hidden md:block">MEDIA</div>
                                 <Camera className="md:hidden"/>
                             </button>
                         </div>
                     </div>
                     {
-                    page == 0 ? <Information/> : 
-                    page == 1 ? <Projects/> :
-                    page == 2 ? <div>Photos</div> : <div/>
+                    page == 0 ? <Information/> :
+                    page == 1 ? <Experience/> :  
+                    page == 2 ? <Projects/> :
+                    page == 3 ? <div>Photos</div> : <div/>
                     }
                 </div>
                 
