@@ -20,15 +20,24 @@ const xlRarityColors:RarityMap = {
     "Legendary": "2xl:bg-legendary"
 }
 
+const gradientRarity:RarityMap = {
+    "Uncommon": "2xl:bg-linear-to-l 2xl:from-uncommon 2xl:to-zinc-800 2xl:to-50%",
+    "Rare": "2xl:bg-linear-to-l 2xl:from-rare 2xl:to-zinc-800 2xl:to-50%",
+    "Legendary": "2xl:bg-linear-to-l 2xl:from-legendary 2xl:to-zinc-800 2xl:to-50%"
+}
+
 export function Projects()
 {
     const [selected, setSelected] = useState(-1)
 
     return(
-        <MouseParallaxChild className="flex flex-col lg:grid lg:grid-cols-3 gap-8 size-full p-0 sm:p-2 overflow-y-scroll lg:overflow-auto">
+        <MouseParallaxChild className="flex flex-col animate-fade-up lg:grid lg:grid-cols-3 gap-8 size-full p-0 sm:p-2 overflow-y-scroll lg:overflow-auto">
             <div className="size-full h-fit lg:h-full p-4 sm:p-0 col-span-2 lg:overflow-y-scroll">
-                <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide sm:pl-2 sticky -top-2 lg:top-0 w-full bg-gray-950">PROJECTS</div>
-                <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) p-0 pt-2 sm:p-2 flex flex-col 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-4 gap-8 sm:gap-2 size-full h-fit">
+                <div className="font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row justify-between text-xl tracking-wide sm:pl-2 lg:top-0 w-full">
+                    PROJECTS
+                    <div className="text-zinc-500 tracking-wide">{`1 - ${projects.length} / ${projects.length}`}</div>
+                </div>
+                <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) p-0 pt-2 sm:p-2 flex flex-col 2xl:grid 2xl:grid-cols-2 2xl:grid-rows-4 gap-8 lg:gap-2 size-full h-fit">
                 {
                     mapArray(8, 0).map((v)=>{
 
@@ -39,8 +48,8 @@ export function Projects()
                         else
                         return(
                             <>
-                                <div id={"project"+v} onClick={()=>{selected != v && setSelected(v)}} className={`justify-start ${v == selected && "row-span-4"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
-                                    <div className={`text-left flex flex-row gap-4 p-2 ${rarityColors[p?.rarity] || "bg-rare"} ${v == selected ? (xlRarityColors[p?.rarity] || "2xl:bg-rare") : "2xl:bg-zinc-800 2xl:cursor-pointer 2xl:hover:bg-[#7a7a7a7a]"}`}>
+                                <div id={"project"+v} onClick={()=>{selected != v && setSelected(v)}} className={`justify-start ${v == selected && "row-span-4 animate-expand"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
+                                    <div className={`text-left flex flex-row gap-4 p-2 ${rarityColors[p?.rarity] || "bg-rare"} ${v == selected ? (xlRarityColors[p?.rarity] || "2xl:bg-rare") : (gradientRarity[p?.rarity] || "2xl:bg-zinc-800") + " 2xl:cursor-pointer 2xl:hover:from-[#7a7a7a7a] 2xl:hover:to-[#7a7a7a7a]"}`}>
                                         <img className="size-24 sm:size-32 border border-zinc-700 bg-zinc-900 " src={p.images[0]}/>
                                         <div className="flex flex-col gap-1 sm:gap-2 w-full overflow-x-scroll">
                                             <div className="text-lg sm:text-2xl tracking-wide flex flex-row gap-2">
@@ -71,7 +80,7 @@ export function Projects()
                                             
                                         </div>
                                     </div>
-                                    <div className={`block ${v == selected ? "2xl:block" : "2xl:hidden"}`}>
+                                    <div className={`block ${v == selected ? "2xl:block animate-fade" : "2xl:hidden"}`}>
                                         <div className="text-base sm:text-xl/normal tracking-wide p-4 text-zinc-300 whitespace-pre-wrap font-(family-name:--font-haas-grot-disp-55-roman)">
                                             {p.description}
                                         </div>

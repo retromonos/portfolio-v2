@@ -6,9 +6,12 @@ import { Building, Calendar, Globe, MapPin } from "lucide-react";
 export function Experience()
 {
     return(
-        <MouseParallaxChild className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll px-4 md:px-8 lg:px-0 grid grid-cols-5 gap-4 w-full">
+        <MouseParallaxChild className="text-xl/9 animate-fade-up font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll px-4 md:px-8 lg:px-0 grid grid-cols-5 gap-4 w-full">
         <div/>
-        <div className="col-span-5 lg:col-span-3 font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide sticky -top-2 lg:top-0 w-full bg-gray-950 ">EXPERIENCE</div>
+        <div className="col-span-5 lg:col-span-3 font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row justify-between text-xl tracking-wide lg:top-0 w-full">
+            EXPERIENCE
+            <div className="text-zinc-500 tracking-wide">{`1 - ${jobs.length} / ${jobs.length}`}</div>
+        </div>
         <div/>
         {
             jobs.map((v, i)=>{
@@ -58,18 +61,18 @@ export function Experience()
                             </div>
                             <div className="w-full p-4 pt-0">
                                 <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-lg sm:text-xl">TASKS:</div>
-                                <ul className="text-base tracking-wide sm:text-lg w-full text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
+                                <ul className="text-base sm:text-xl/normal tracking-wide w-full text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
                                 {
                                     v.bullets.map((v)=>{
-                                        return(<li>{v}</li>)
+                                        return(<li className="gap-1.5">{v}</li>)
                                     })
                                 }
                                 </ul>
                                 <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] pt-2 text-lg sm:text-xl">SKILLS:</div>
-                                <div className="text-base tracking-wide flex flex-row flex-wrap gap-2 sm:text-lg w-full text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
+                                <div className="text-base sm:text-xl/normal tracking-wide flex flex-row flex-wrap gap-2 w-full text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
                                 {
                                     v.skills.map((v)=>{
-                                        return(<div className="border p-1 border-zinc-700 bg-zinc-900">{v}</div>)
+                                        return(<div className="border p-1 px-1.5 border-zinc-700 bg-zinc-900">{v}</div>)
                                     })
                                 }
                                 </div>

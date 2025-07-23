@@ -5,6 +5,8 @@ import { useState } from "react";
 import { Information } from "./pages/Information";
 import { Projects } from "./pages/Projects";
 import { Experience } from "./pages/Experience";
+import { projects } from "../json/projects.json"
+import { LangList, ToolList } from "./pages/Tools";
 
 export function MainDoc({reset}:{reset:()=>void})
 {
@@ -13,7 +15,7 @@ export function MainDoc({reset}:{reset:()=>void})
     const [page, setPage] = useState(0)
 
     return(
-        <div id="maindoc" className="bg-gray-950 size-full p-0 sm:p-2">
+        <div id="maindoc" className="bg-linear-270 to-75% from-[#060d21] to-gray-950 size-full p-0 sm:p-2">
             <MouseParallaxContainer globalFactorX={0.025} globalFactorY={0.025} className="border-0 sm:border-2 border-gray-700 size-full flex flex-row p-0 lg:p-2 font-(family-name:--font-haas-grot-disp-65)">
                 <div className="flex flex-col gap-4 w-full">
                     <div className="flex flex-row gap-8 w-full justify-between text-[#dedede] p-4">
@@ -48,6 +50,10 @@ export function MainDoc({reset}:{reset:()=>void})
                     page == 2 ? <Projects/> :
                     page == 3 ? <div>Photos</div> : <div/>
                     }
+                    <div className={`hidden animate-fade-up tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) ${page == 2 && "2xl:flex"} p-4 flex-row gap-8 text-xl text-zinc-400`}>
+                        {`${projects.length + ToolList.length + LangList.length} / ∞`}
+                        <div className="text-zinc-500">Total Project and Skill Capacity</div>
+                    </div>
                 </div>
                 
             </MouseParallaxContainer>

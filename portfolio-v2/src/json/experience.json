@@ -4,7 +4,7 @@
             "name": "KnightHacks",
             "title": "Hackathon Organizer",
             "rarity": "Legendary",
-            "description": "Test",
+            "description": "KnightHacks is a UCF RSO for software development, which hosts a yearly hackathon, also named KnightHacks. Consistently, our hackathons have pulled 700+ people, and reach almost 100 projects submitted. From my experience volunteering and participating in various hackathons, I was brought onto the team to organize KnightHacks VIII, which will be held in October of 2025.",
             "time": "7/25 - Present",
             "links": [
                 "https://club.knighthacks.org/"
@@ -12,12 +12,13 @@
             "location": "Orlando, FL",
             "logo": "knighthacks.jpg",
             "bullets": [
-                "A",
-                "B"
+                "Working with our directing team to utilize over $60,000 worth of event funding.",
+                "Constructing an environment that provides hundreds of student hackers deadline-limited programming experience.",
+                "Assisting in logistics for a target of 1000+ people attending the event.",
+                "Planning engaging events to combat development burnout and make KnightHacks truly memorable."
             ],
             "skills": [
-                "x",
-                "y"
+                "Leadership", "Fundraising", "Event Planning", "Logistics", "Teamwork", "Budgeting"
             ]
         },
         {
@@ -32,19 +33,19 @@
             "location": "Orlando, FL",
             "logo": "dentracex.jpg",
             "bullets": [
-                "Authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible",
-                "Working with a team of diverse disciplines to process and handle sensitive medical information"
+                "Assist in the incorporation and management of a non-profit organization focused on a public good.",
+                "Authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible.",
+                "Working with a team of diverse disciplines to process and handle sensitive medical information, such as outreach and design."
             ],
             "skills": [
-                "x",
-                "y"
+                "Project Management", "Teamwork", "Corporation Development", "Web Development", "Server Management"
             ]
         },
         {
             "name": "Publix Super Markets",
             "title": "Cashier",
             "rarity": "Uncommon",
-            "description": "Test",
+            "description": "Working as a Cashier, I interact with hundreds of customers a day, making sure that their needs are met and that they are truly happy to shop at Publix. As my first job, it's where I built much of my soft skills and self-accountability.",
             "time": "2/23 - Present",
             "links": [
                 "https://corporate.publix.com/"
@@ -52,12 +53,12 @@
             "location": "Orlando, FL",
             "logo": "Publix_Retail_Logo.png",
             "bullets": [
-                "A",
-                "B"
+                "Processing customer transactions efficiently while providing great service.",
+                "Able to adapt easily to changes in working condition/customer inflow.",
+                "Working as a team to ensure the completion of all daily tasks while keeping store operations running smoothly."
             ],
             "skills": [
-                "x",
-                "y"
+                "Customer Service", "Conflict Resolution", "Adaptability", "Teamwork"
             ]
         }
     ]

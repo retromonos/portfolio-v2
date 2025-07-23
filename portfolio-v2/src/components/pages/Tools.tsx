@@ -1,15 +1,21 @@
 import { Tooltip } from "react-tooltip";
 
 export const LangList = [
-    "TypeScript", "Python", "Java", "Lua", "C", "C#", "C++"
+    "TypeScript", "Python", "Java", "Lua", "C", "C#", "C++", "PhP", "HTML", "CSS"
 ]
 
 export const ToolList = [
-    "JWT", "Unity", "React", "Tailwind", "Clerk", "MySQL", "MongoDB", "Prisma", "Docker",
+    "Linux", "Git", "GitHub", "Coolify", "Docker", "JWT", "Clerk", "Unity", "React", "Tailwind", "MySQL", "MongoDB", "Prisma",
     "Zx", "ExpressJS", "tRPC", "Websockets", "Google Gemini", "OpenCV", "MediaPipe"
 ]
 
 export const ToolInfo:{[index:string]: {image:string, fg:string, bg:string}} = {
+    "HTML": {image:"tools/html5.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "CSS": {image:"tools/css.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "Linux": {image:"tools/Tux.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
+    "Git": {image:"tools/git.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
+    "GitHub": {image:"tools/github-mark.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
+    "Coolify": {image:"tools/coolify-logo.png", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "React": {image:"tools/react.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "C": {image:"tools/C_Programming_Language.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "Clerk": {image:"tools/clerklogo.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
@@ -19,17 +25,18 @@ export const ToolInfo:{[index:string]: {image:string, fg:string, bg:string}} = {
     "Lua": {image:"tools/lua-official.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "C#": {image:"tools/Logo_C_sharp.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "C++": {image:"tools/ISO_C++_Logo.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
-    "JWT": {image:"tools/jwt-flower.png", fg:"text-[#61dafb]", bg:"from-purple-300 to-indigo-500"},
+    "PhP": {image:"tools/php.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "JWT": {image:"tools/jwt-flower.png", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Unity": {image:"tools/unity.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Tailwind": {image:"tools/tailwindcss-mark.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
-    "MySQL": {image:"tools/mysql-icon.svg", fg:"text-[#61dafb]", bg:"from-orange-500 to-orange-600"},
-    "MongoDB": {image:"tools/mongodb-icon-2.svg", fg:"text-[#61dafb]", bg:"from-green-800 to-green-950"},
+    "MySQL": {image:"tools/mysql-icon.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "MongoDB": {image:"tools/mongodb-icon-2.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "Prisma": {image:"tools/Prisma-LightSymbol.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
-    "Docker": {image:"tools/docker-mark-white.svg", fg:"text-[#61dafb]", bg:"from-[#1D63ED] to-[#1D63ED]"},
+    "Docker": {image:"tools/docker-mark-blue.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Zx": {image:"tools/zx.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "ExpressJS": {image:"tools/express-js.png", fg:"text-[#61dafb]", bg:"from-zinc-200 to-zinc-300"},
-    "tRPC": {image:"tools/trpc.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
-    "Websockets": {image:"tools/WebSocket_colored_logo.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "tRPC": {image:"tools/trpc.svg", fg:"text-[#61dafb]", bg:"from-zinc-200 to-zinc-300"},
+    "Websockets": {image:"tools/WebSocket_colored_logo.svg", fg:"text-[#61dafb]", bg:"from-zinc-200 to-zinc-300"},
     "Google Gemini": {image:"tools/Google-gemini-icon.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "OpenCV": {image:"tools/OpenCV.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "MediaPipe": {image:"tools/mediapipe.png", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"}
@@ -39,7 +46,10 @@ export function Tools()
 {
     return(
         <>
-            <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide sticky -top-2 lg:top-0 w-full bg-gray-950 pb-2">LANGUAGES</div>
+            <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl flex flex-row justify-between tracking-wide lg:top-0 w-full pb-2">
+                LANGUAGES
+                <div className="text-zinc-500 tracking-wide mr-2">{`1 - ${LangList.length} / ${LangList.length + ToolList.length}`}</div>
+            </div>
             <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll gap-2 flex flex-wrap flex-row justify-start size-fit mb-4">
             {
                 LangList.map((v,i)=>{
@@ -66,7 +76,10 @@ export function Tools()
                 })
             }
             </div>
-            <div className="font-(family-name:--font-haas-grot-disp-55-roman) text-xl tracking-wide sticky -top-2 lg:top-0 w-full bg-gray-950 pb-2">TOOLS</div>
+            <div className="font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row justify-between text-xl tracking-wide lg:top-0 w-full pb-2">
+                TOOLS
+                <div className="text-zinc-500 mr-2 tracking-wide">{`${LangList.length + 1} - ${LangList.length + ToolList.length} / ${LangList.length + ToolList.length}`}</div>
+            </div>
             <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll gap-2 flex flex-wrap flex-row justify-start size-fit">
             {
                 ToolList.map((v,i)=>{
