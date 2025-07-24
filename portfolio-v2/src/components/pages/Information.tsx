@@ -3,16 +3,36 @@ import { MouseParallaxChild } from "react-parallax-mouse";
 export function Information()
 {
     return(
-        <MouseParallaxChild className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) overflow-y-scroll">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia venenatis nisi, sed feugiat elit accumsan ornare. Donec nec ex tincidunt, molestie nisi nec, semper tortor. Mauris efficitur quis neque non cursus. Phasellus ornare pharetra orci et sodales. Donec cursus, quam eget venenatis consectetur, justo mi mollis urna, non feugiat justo odio id augue. Quisque tristique tincidunt nunc, sit amet fringilla arcu placerat eget. Aliquam egestas, ante nec maximus lacinia, leo leo ultrices dui, at mollis diam est nec tellus. Quisque vel laoreet risus, ac maximus enim. Donec blandit congue metus at mollis. Aliquam eget est scelerisque, porttitor justo et, pulvinar neque.
-            <br/>
-            Vivamus ultrices, massa nec iaculis laoreet, ante magna maximus lectus, quis sagittis augue urna ut eros. Integer vulputate nulla tempor arcu vulputate aliquet. Donec turpis lectus, molestie vitae pulvinar ut, gravida pretium tellus. Sed quis libero cursus, facilisis risus quis, dapibus lectus. Proin eleifend, ipsum in dignissim commodo, augue felis semper urna, nec eleifend tortor tellus ac dolor. Sed et gravida massa. Suspendisse purus ligula, consequat a lobortis sit amet, hendrerit a dui. Nullam maximus odio vitae diam congue, bibendum pulvinar ante porttitor. Cras egestas tortor sit amet purus pretium dignissim. Morbi porttitor lacus diam, in blandit nunc sodales nec. Sed sed dui risus. Donec ut lectus eu risus malesuada tempor. Mauris mattis, ipsum ut varius pharetra, ex sapien molestie nisi, ac placerat dui odio id leo.
-            <br/>
-            Morbi neque enim, lobortis at elit at, dictum aliquam sapien. Donec neque ante, blandit et gravida at, faucibus vitae enim. Quisque vel arcu interdum, eleifend purus eu, varius justo. Duis leo lectus, sodales sed nibh id, tincidunt accumsan ex. Praesent a efficitur odio, at fringilla orci. Pellentesque ornare at urna ut fermentum. Nullam quis neque nec libero imperdiet interdum a ut ipsum. Nullam aliquam ut lectus non eleifend. Etiam sodales augue enim, vitae mattis ipsum ultricies vel. Donec auctor nibh sed neque rhoncus feugiat. Aliquam a tincidunt elit, quis scelerisque eros.
-            <br/>
-            Morbi ultricies pharetra lectus nec egestas. Ut et odio et tellus placerat imperdiet vitae in nibh. Cras sollicitudin interdum tempus. Phasellus orci eros, vestibulum quis faucibus non, condimentum at metus. Sed posuere porttitor neque non porttitor. Donec felis sem, sagittis sed arcu et, luctus varius orci. Morbi nec tincidunt nisl. Nulla elementum posuere metus sit amet placerat.
-            <br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sodales metus, non vulputate tellus. Praesent feugiat libero a magna egestas iaculis. Donec ut metus at metus maximus tincidunt in et justo. Fusce posuere consectetur vulputate. Duis imperdiet mi vel blandit viverra. Donec eget urna magna. Nulla fringilla sit amet diam ut elementum. Sed pharetra risus velit, quis vehicula ipsum ultrices et. Nullam quis sapien eget dolor maximus scelerisque. Suspendisse a felis massa. Sed quis velit tempus, posuere velit et, feugiat est. Nunc iaculis arcu urna. 
+        <MouseParallaxChild className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) animate-fade-up overflow-y-scroll size-full flex flex-col gap-4 lg:flex-row">
+            <div className="flex flex-row justify-between lg:justify-start lg:flex-col gap-4 mx-auto w-full lg:w-fit px-8">
+                <div className="relative size-28 sm:size-32 lg:size-40">
+                    <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-spin" src="hexagon.svg"/>
+                    <a target="_blank" href="https://www.linkedin.com/in/luke-cullen-319701305/" className="absolute rounded-full p-6 lg:p-8 border border-rare/50 bg-rare/25">
+                        <img alt="LinkedIn" className="" src="linkedin.svg"/>
+                    </a>
+                </div>
+                <div className="relative size-28 sm:size-32 lg:size-40">
+                    <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-spin" src="octogon.svg"/>
+                    <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-counter" src="octogon.svg"/>
+                    <img className="absolute size-28 sm:size-32 lg:size-40" src="octo_o_circle.svg"/>
+                    <a target="_blank" href="https://github.com/retromonos" className="absolute rounded-full size-28 sm:size-32 lg:size-40 p-4 lg:p-6 border border-uncommon/50 bg-uncommon/25">
+                        <img alt="GitHub" className="" src="github_ot.svg"/>
+                    </a>
+                </div>
+                <div className="relative size-28 sm:size-32 lg:size-40">
+                    <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-spin" src="star.svg"/>
+                    <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-counter" src="star.svg"/>
+                    <img className="absolute size-28 sm:size-32 lg:size-40" src="octogon.svg"/>
+                    <a target="_blank" href="LukeCullen_Resume06_25-1.pdf" className="absolute rounded-full size-28 sm:size-32 lg:size-40 p-8 lg:p-10 border border-crucible/50 bg-crucible/25">
+                        <img alt="Resume" className="" src="fileicon.svg"/>
+                    </a>
+                </div>
+            </div>
+            <div className="w-full px-8 lg:order-first">
+                <div className="text-3xl/9 font-(family-name:--font-haas-grot-disp-55-roman)">
+                    Hi, I'm Luke.
+                </div>
+            </div>
         </MouseParallaxChild>
     )
 }

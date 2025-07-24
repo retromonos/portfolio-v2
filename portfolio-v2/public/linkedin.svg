@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="512" height="512">
+	<title>linkedin</title>
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-miterlimit:100;stroke-width: 8 } 
+	</style>
+	<g id="LinkedIn_icon">
+		<g>
+			<path fill-rule="evenodd" class="s0" d="m33.2 250.5h190.1c15 0 27.2-12.2 27.2-27.2v-190.1c0-15-12.2-27.2-27.2-27.2h-190.1c-15 0-27.2 12.2-27.2 27.2v190.1c0 15 12.2 27.2 27.2 27.2z"/>
+			<path fill-rule="evenodd" class="s0" d="m216.5 216.5h-36.2v-61.8c0-16.9-6.5-26.4-19.9-26.4-14.6 0-22.2 9.9-22.2 26.4v61.8h-35v-117.7h35v15.9c0 0 10.5-19.5 35.5-19.5 25 0 42.8 15.3 42.8 46.8zm-155-133.1c-11.9 0-21.5-9.7-21.5-21.8 0-12 9.6-21.7 21.5-21.7 11.9 0 21.6 9.7 21.6 21.7 0 12.1-9.7 21.8-21.6 21.8zm18.4 15.4v117.7h-36.4v-117.7z"/>
+		</g>
+	</g>
+</svg>

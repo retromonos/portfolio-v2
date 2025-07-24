@@ -62,7 +62,7 @@ export function Projects()
                                             <div className={`flex flex-col gap-2 w-full ${v != selected && "2xl:hidden"}`}>
                                                 {
                                                 p.link != "" ?
-                                                <a href={p.link} target="_blank" className="text-base sm:text-xl tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 text-zinc-300 flex flex-row w-fit p-1 sm:p-2 gap-2">
+                                                <a href={p.link} target="_blank" className="text-base bg-[#00000041] border border-[#c2c2c2] sm:text-xl tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 text-zinc-300 flex flex-row w-fit p-1 sm:p-2 gap-2">
                                                    <Globe className="my-auto size-4 sm:size-6"/>
                                                    {p?.link.replace("https://", "")}
                                                 </a>

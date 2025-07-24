@@ -331,12 +331,27 @@
   --color-uncommon: #336b3e;
   --color-rare: #567e9d;
   --color-legendary: #4f3663;
+  --color-crucible: #ba3f36;
 
   --animate-small-ping: ping2 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-fade: fade 1s cubic-bezier(0, 0, 0.2, 1) 1;
   --animate-fade-up: fade-up 1.25s cubic-bezier(0, 0, 0.2, 1) 1;
   --animate-expand: expand 0.25s cubic-bezier(0, 0, 0.2, 1) 1;
   --animate-fade-delay: fade-delay 0.5s cubic-bezier(0, 0, 0.2, 1) 1;
+  --animate-slow-spin: slow-spin 16s linear infinite;
+  --animate-slow-counter: slow-spin-counter 16s linear infinite;
+
+  @keyframes slow-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes slow-spin-counter {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 
   @keyframes ping2 {
     75%, 100% {

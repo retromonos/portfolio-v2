@@ -1,0 +1,8 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="512" height="512">
+	<title>hexagon</title>
+	<style>
+		.s0 { fill: none;stroke: #ffffff;stroke-miterlimit:100;stroke-width: 2 } 
+	</style>
+	<path id="Shape 1" fill-rule="evenodd" class="s0" d="m127.5 236.5c-60 0-108.5-48.5-108.5-108.5 0-60 48.5-108.5 108.5-108.5 60 0 108.5 48.5 108.5 108.5 0 60-48.5 108.5-108.5 108.5z"/>
+	<path id="Shape 2" fill-rule="evenodd" class="s0" d="m212.3 211.9l-84 35.1-84.2-34.7-35.1-84 34.7-84.2 84-35.1 84.2 34.7 35.1 84z"/>
+</svg>

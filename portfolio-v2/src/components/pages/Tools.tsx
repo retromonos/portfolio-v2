@@ -6,7 +6,7 @@ export const LangList = [
 
 export const ToolList = [
     "Linux", "Git", "GitHub", "Coolify", "Docker", "JWT", "Clerk", "Unity", "React", "Tailwind", "MySQL", "MongoDB", "Prisma",
-    "Zx", "ExpressJS", "tRPC", "Websockets", "Google Gemini", "OpenCV", "MediaPipe"
+    "Zx", "ExpressJS", "Node.js", "tRPC", "Websockets", "Google Gemini", "OpenCV", "MediaPipe"
 ]
 
 export const ToolInfo:{[index:string]: {image:string, fg:string, bg:string}} = {
@@ -16,6 +16,7 @@ export const ToolInfo:{[index:string]: {image:string, fg:string, bg:string}} = {
     "Git": {image:"tools/git.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "GitHub": {image:"tools/github-mark.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Coolify": {image:"tools/coolify-logo.png", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
+    "Node.js": {image:"tools/nodejs.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "React": {image:"tools/react.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "C": {image:"tools/C_Programming_Language.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "Clerk": {image:"tools/clerklogo.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
@@ -34,9 +35,9 @@ export const ToolInfo:{[index:string]: {image:string, fg:string, bg:string}} = {
     "Prisma": {image:"tools/Prisma-LightSymbol.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "Docker": {image:"tools/docker-mark-blue.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Zx": {image:"tools/zx.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
-    "ExpressJS": {image:"tools/express-js.png", fg:"text-[#61dafb]", bg:"from-zinc-200 to-zinc-300"},
-    "tRPC": {image:"tools/trpc.svg", fg:"text-[#61dafb]", bg:"from-zinc-200 to-zinc-300"},
-    "Websockets": {image:"tools/WebSocket_colored_logo.svg", fg:"text-[#61dafb]", bg:"from-zinc-200 to-zinc-300"},
+    "ExpressJS": {image:"tools/express-js.png", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
+    "tRPC": {image:"tools/trpc.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
+    "Websockets": {image:"tools/WebSocket_colored_logo.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Google Gemini": {image:"tools/Google-gemini-icon.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "OpenCV": {image:"tools/OpenCV.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "MediaPipe": {image:"tools/mediapipe.png", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"}
@@ -85,7 +86,6 @@ export function Tools()
                 ToolList.map((v,i)=>{
                     return(
                         <>
-                            
                             <div id={"tool"+i} className="size-20 border bg-linear-to-b from-zinc-200 to-zinc-400 p-0.5">
                                 <div className={`${ToolInfo[v] ? ("bg-linear-to-b " + ToolInfo[v].bg) : "bg-zinc-700"} size-full p-2 flex`}>
                                     <img className={(ToolInfo[v] ? ToolInfo[v].fg : "text-zinc-100") + "border border-white size-full m-auto"} src={ToolInfo[v] ? ToolInfo[v].image : "tools/missing.webp"}></img>
