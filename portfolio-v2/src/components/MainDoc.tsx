@@ -25,7 +25,7 @@ export function MainDoc({reset}:{reset:()=>void})
                                 <div className="hidden md:block">ESC</div>
                             </div>
                         </button>
-                        <div className="flex flex-row gap-8">
+                        <div className="flex flex-row gap-4 lg:gap-8">
                             <button onClick={()=>setPage(0)} className={`${page == 0 ? "text-[#dedede] border-[#dedede] border-b-2" : "text-[#dedede8f] border-[#dedede8f]" } text-2xl text-right tracking-wider px-4 py-1`}>
                                 <div className="hidden md:block">INFO</div>
                                 <Info className="md:hidden"/>
