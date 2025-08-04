@@ -7,6 +7,7 @@ import { Projects } from "./pages/Projects";
 import { Experience } from "./pages/Experience";
 import { projects } from "../json/projects.json"
 import { LangList, ToolList } from "./pages/Tools";
+import { Media } from "./pages/Media";
 
 export function MainDoc({reset}:{reset:()=>void})
 {
@@ -45,10 +46,10 @@ export function MainDoc({reset}:{reset:()=>void})
                         </div>
                     </div>
                     {
-                    page == 0 ? <Information/> :
+                    page == 0 ? <Information setPage={setPage}/> :
                     page == 1 ? <Experience/> :  
                     page == 2 ? <Projects/> :
-                    page == 3 ? <div>Photos</div> : <div/>
+                    page == 3 ? <Media/> : <div/>
                     }
                     <div className={`hidden animate-fade-up tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) ${page == 2 && "2xl:flex"} p-4 flex-row gap-8 text-xl text-zinc-400`}>
                         {`${projects.length + ToolList.length + LangList.length} / ∞`}

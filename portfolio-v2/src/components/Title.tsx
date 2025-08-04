@@ -1,4 +1,3 @@
-import { ChevronDownIcon } from "lucide-react";
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -68,7 +67,7 @@ export function Title()
         <div id="3input" className="absolute size-full z-10">
             {canvas}
         </div>
-        <div className="flex absolute z-20 flex-col items-center justify-center size-full bg-transparent p-8">
+        <div className="flex absolute z-20 flex-col items-center justify-center size-full bg-transparent p-8 pb-16">
             <MouseParallaxChild className="flex flex-col items-end text-[60px] sm:text-[80px] text-right size-full font-(family-name:--font-haas-grot-disp-65)">
                 <div className='w-fit'>Luke Cullen</div>
                 <div className="text-[18px] sm:text-[24px] md:text-[30px] border-t text-right size-full w-fit pt-2 font-(family-name:--font-haas-grot-disp-55-roman)">
@@ -81,7 +80,6 @@ export function Title()
                     <div className='absolute top-0 left-0 w-full h-full outline animate-small-ping outline-offset-0 hover:animate-none hover:outline-offset-4'></div>
                     OPEN PORTFOLIO
                 </button>
-                <ChevronDownIcon className='mx-auto mt-4' />
             </MouseParallaxChild>
             
         </div>

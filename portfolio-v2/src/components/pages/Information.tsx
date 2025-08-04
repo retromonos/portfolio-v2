@@ -1,6 +1,7 @@
+import { ChevronLast } from "lucide-react";
 import { MouseParallaxChild } from "react-parallax-mouse";
 
-export function Information()
+export function Information({setPage}:{setPage:(p:number)=>void})
 {
     return(
         <MouseParallaxChild className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) animate-fade-up size-full flex flex-col gap-4 lg:flex-row">
@@ -28,21 +29,35 @@ export function Information()
                     </a>
                 </div>
             </div>
-            <div className="w-full p-8 lg:order-first overflow-y-scroll">
-                <div className="text-8xl/9 font-(family-name:--font-haas-grot-disp-65)">
-                    Hi, I'm Luke.
+            <div className="w-full p-8 lg:order-first overflow-y-scroll mb-8">
+                <div className="text-6xl/9 lg:text-8xl/9 font-(family-name:--font-haas-grot-disp-65)">
+                    Welcome.
                 </div>
-                <div className="whitespace-pre-line">
+                <div className="whitespace-pre-line text-2xl/11 lg:text-3xl/12 gap-4 font-(family-name:--font-haas-grot-disp-45) tracking-wider">
                     <br/>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet finibus purus, eget dictum quam malesuada et. Maecenas molestie nunc id lectus bibendum, at elementum turpis accumsan. Etiam semper luctus dolor eu euismod. Fusce libero ipsum, vestibulum nec congue sit amet, elementum id enim. Phasellus fermentum erat sit amet ultricies ornare. Fusce nisl justo, feugiat sit amet elementum at, porta eu tortor. Suspendisse potenti. Curabitur a cursus lacus. Proin pulvinar enim a odio ultricies egestas. Vivamus sollicitudin hendrerit rutrum. Nullam mollis sagittis nisi, at mollis elit lobortis nec. Suspendisse potenti. Nam facilisis sem sed leo euismod tincidunt. Ut feugiat massa neque. Nunc convallis pellentesque urna, quis mollis arcu maximus sed.
-                    <br/><br/>
-                    Duis venenatis venenatis ligula, nec varius ex fringilla eget. Aenean ornare, arcu at sodales semper, lorem felis lacinia lacus, vel sodales nisi diam ut nunc. Phasellus non lorem orci. Proin iaculis nunc sapien, sit amet placerat arcu dapibus vitae. Donec ultrices nulla non justo consequat facilisis. Aenean convallis ante justo, sit amet maximus massa viverra id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam augue sapien, scelerisque nec nisl in, placerat bibendum libero. Etiam bibendum ullamcorper neque, eu feugiat augue malesuada vel.
-                    <br/><br/>
-                    Sed euismod consectetur libero a imperdiet. Nam imperdiet felis nec dignissim sagittis. Nam nec suscipit dui. Cras venenatis gravida faucibus. Nunc lacinia fermentum nibh, non consectetur arcu tincidunt id. Aliquam pulvinar non sem eu bibendum. Donec accumsan, ex et rhoncus malesuada, magna magna fringilla metus, id bibendum nisi quam ut quam. Cras arcu orci, luctus eu condimentum imperdiet, blandit ac purus.
-                    <br/><br/>
-                    Aliquam lacinia imperdiet est, nec varius enim varius porta. Donec vulputate urna eget laoreet dapibus. Vestibulum tristique orci ut interdum consequat. Aliquam erat volutpat. Maecenas sollicitudin, quam sed tempus semper, neque erat ornare dolor, in pulvinar metus risus vel elit. Curabitur rhoncus, risus eget interdum interdum, nulla sapien commodo urna, sit amet suscipit nisl libero ut est. Morbi dapibus velit vulputate ante accumsan, eget hendrerit dolor lobortis. Quisque elementum quam quis risus finibus, non auctor lorem egestas. Curabitur venenatis, lectus ut facilisis fermentum, metus magna fermentum magna, ut cursus erat nibh non lorem. Nam vel fringilla dui. Etiam placerat in massa sit amet elementum. Praesent quis risus urna. Donec porttitor ac nulla a lobortis.
-                    <br/><br/>
-                    Maecenas in iaculis diam. Curabitur tempus eros vitae nibh fringilla tristique. Nullam imperdiet justo libero, eu rhoncus magna sollicitudin id. Aliquam fermentum sit amet ipsum et convallis. Aenean consequat auctor lectus, ac ultricies elit laoreet eu. Nam volutpat tortor mattis massa molestie aliquam. Phasellus tempus viverra sem et rhoncus. Nulla a lectus condimentum, volutpat ligula quis, tristique mi. Morbi vehicula ultricies dui, sit amet faucibus libero consectetur vel. In pretium arcu eget malesuada commodo. Curabitur lobortis ultricies velit, in maximus arcu egestas porta. Maecenas efficitur mattis velit eu condimentum. Vivamus euismod augue non mi iaculis feugiat. 
+                    <img src="Portrait.webp" className="inline float-left mr-8 size-48 outline border outline-offset-4 outline-zinc-700 border-zinc-700"/>
+                    My name is Luke Cullen, and I’m a Computer Science student minoring in Data Science at the University of Central Florida. I’m currently helping organize the next <span className="font-(family-name:--font-haas-grot-disp-65)">KnightHacks</span> hackathon, as well as developing the non-profit I helped co-found, <span className="font-(family-name:--font-haas-grot-disp-65)">DenTraceX</span>.
+                    <button onClick={()=>setPage(1)} className="text-xl bg-[#00000041] border border-[#c2c2c2] tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 flex flex-row text-zinc-300 w-fit p-2 gap-2">
+                        <ChevronLast className="my-auto size-4 sm:size-6"/>
+                        SEE EXPERIENCE
+                    </button>
+                    <div className="flex flex-col lg:grid lg:grid-cols-2 text-2xl/11 my-8 gap-8">
+                        <p>
+                            Professionally, my primary goal is to end up somewhere where I can make a difference in the world. I love the problem-solving tools that my career as a Software Engineer provides me with, and I’m always looking for more ways to use them. I hope that my current experience and projects help convey that this is where my passion lies.
+                            <button onClick={()=>setPage(2)} className="my-2 bg-[#00000041] border border-[#c2c2c2] text-xl tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 flex flex-row text-zinc-300 w-fit p-1 p-2 gap-2">
+                                <ChevronLast className="my-auto size-4 sm:size-6"/>
+                                SEE PROJECTS
+                            </button>
+                        </p>
+                        <p>
+                            In my free time, I like going to local concerts, photography (if my camera wasn’t broken…), as well as drawing, playing games, and finding an excuse to be in nature.
+                            <button onClick={()=>setPage(3)} className="my-2 bg-[#00000041] border border-[#c2c2c2] text-xl tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 flex flex-row text-zinc-300 w-fit p-1 p-2 gap-2">
+                                <ChevronLast className="my-auto size-4 sm:size-6"/>
+                                SEE MEDIA
+                            </button>
+                        </p>
+                    </div>
+                    
                 </div>
             </div>
         </MouseParallaxChild>

@@ -6,7 +6,7 @@ import { Building, Calendar, Globe, MapPin } from "lucide-react";
 export function Experience()
 {
     return(
-        <MouseParallaxChild className="size-full animate-fade-up flex flex-col gap-0 overflow-y-scroll">
+        <MouseParallaxChild className="size-full animate-fade-up flex flex-col gap-0 overflow-y-scroll tracking-wide">
             <div className="text-xl/9 font-(family-name:--font-haas-grot-disp-55-roman) -mb-2 lg:mb-2 px-4 md:px-8 lg:px-2 grid grid-cols-5 w-full">
                 <div/>
                 <div className="col-span-5 lg:col-span-3 font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row justify-between text-xl tracking-wide w-full">

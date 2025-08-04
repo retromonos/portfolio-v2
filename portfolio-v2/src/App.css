@@ -332,6 +332,7 @@
   --color-rare: #567e9d;
   --color-legendary: #4f3663;
   --color-crucible: #ba3f36;
+  --color-exotic: #cdad36;
 
   --animate-small-ping: ping2 1s cubic-bezier(0, 0, 0.2, 1) infinite;
   --animate-fade: fade 1s cubic-bezier(0, 0, 0.2, 1) 1;

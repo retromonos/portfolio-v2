@@ -1,9 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 import { MouseParallaxChild } from "react-parallax-mouse";
 import { ToolInfo, Tools } from "./Tools";
 import { mapArray } from "../../main";
 import { projects } from "../../json/projects.json"
 import { Tooltip } from "react-tooltip";
-import { Calendar, ChevronUp, Globe, Mouse } from "lucide-react";
+import { Calendar, ChevronUp, Globe, Mouse, StarIcon } from "lucide-react";
 import { useState } from "react";
 import { ImageSelector } from "../ImageSelector";
 
@@ -48,12 +49,23 @@ export function Projects()
                         else
                         return(
                             <>
-                                <div id={"project"+v} onClick={()=>{selected != v && setSelected(v)}} className={`justify-start ${v == selected && "row-span-4 animate-expand"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
+                                <div id={"project"+v} onClick={()=>{if(selected != v) setSelected(v);}} className={`justify-start ${v == selected && "row-span-4 animate-expand"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
                                     <div className={`text-left flex flex-row gap-4 p-2 ${rarityColors[p?.rarity] || "bg-rare"} ${v == selected ? (xlRarityColors[p?.rarity] || "2xl:bg-rare") : (gradientRarity[p?.rarity] || "2xl:bg-zinc-800") + " 2xl:cursor-pointer 2xl:hover:from-[#7a7a7a7a] 2xl:hover:to-[#7a7a7a7a]"}`}>
                                         <img className="size-24 sm:size-32 border border-zinc-700 bg-zinc-900 " src={p.images[0]}/>
                                         <div className="flex flex-col gap-1 sm:gap-2 w-full overflow-x-scroll">
                                             <div className="text-lg sm:text-2xl tracking-wide flex flex-row gap-2">
                                                 {p?.name}
+                                                <StarIcon id={"star"+v} className={`${p?.prize.length > 0 ? "block" : "hidden"} my-auto text-zinc-300`}/>
+                                                <Tooltip delayHide={0} delayShow={0} disableStyleInjection style={{backgroundColor: "rgb(0,0,0,0)", padding: 0}} anchorSelect={"#star"+v} float noArrow place="right" opacity={v == selected ? 0 : 1}>
+                                                    <div className="flex flex-col w-full bg-exotic/90">
+                                                        <div className={`bg-zinc-800 font-(family-name:--font-haas-grot-disp-65) text-3xl p-4 pb-2`}>
+                                                            AWARDS
+                                                            <div className="text-xl/normal tracking-wide text-zinc-300 font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row w-full justify-between">
+                                                                <div>Language</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </Tooltip>
                                                 <button onClick={()=>setSelected(-1)} className={`my-auto hidden ${v == selected && "2xl:block"}`}>
                                                     <ChevronUp className="size-6"/>
                                                 </button>   
@@ -87,17 +99,25 @@ export function Projects()
                                         <div className="grid grid-cols-2 w-full">
                                             <div className="w-full p-4 pt-0">
                                                 <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-lg sm:text-xl">TOOLS:</div>
-                                                <div className="text-sm sm:text-lg flex flex-col w-full gap-0.5 text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
+                                                <div className="text-sm sm:text-lg grid grid-cols-2 w-full gap-0.5 text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman)">
                                                 {
                                                     p.tools.map((v)=>{
                                                         return(
                                                         <div className="flex flex-row gap-2">
                                                             <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/missing.webp"}/>
-                                                            {v}
+                                                            <div className="my-auto">{v}</div>
                                                         </div>)
                                                     })
                                                 }
                                                 </div>
+                                                <div className={`font-(family-name:--font-haas-grot-disp-65) pt-2 text-exotic text-lg sm:text-xl ${p?.prize.length == 0 && "hidden"}`}>AWARDS:</div>
+                                                <ul className={`text-sm sm:text-lg w-full gap-0.5 text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman) ${p?.prize.length == 0 && "hidden"}`}>
+                                                {
+                                                    p.prize.map((v)=>{
+                                                        return(<li>{v}</li>)
+                                                    })
+                                                }
+                                                </ul>
                                             </div>
                                             <div className="w-full p-4 pt-0">
                                                 <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-lg sm:text-xl">IMAGES:</div>
@@ -109,7 +129,7 @@ export function Projects()
                                 <div className="absolute hidden z-50 2xl:block">
                                 <Tooltip delayHide={0} delayShow={0} disableStyleInjection style={{backgroundColor: "rgb(0,0,0,0)", padding: 0}} anchorSelect={"#project"+v} float noArrow place="right" opacity={v == selected ? 0 : 1}>
                                         <div className="flex flex-col w-96 bg-zinc-800/90">
-                                            <div className={`${rarityColors[p.rarity] || "bg-rare"} font-(family-name:--font-haas-grot-disp-65) text-3xl p-4 pb-2`}>
+                                            <div className={`${rarityColors[p.rarity] || "bg-rare"} tracking-wide font-(family-name:--font-haas-grot-disp-65) text-3xl p-4 pb-2`}>
                                                 {p.name.toUpperCase()}
                                                 <div className="text-xl/normal tracking-wide text-zinc-300 font-(family-name:--font-haas-grot-disp-55-roman) flex flex-row w-full justify-between">
                                                     <div className="flex flex-row gap-1">
@@ -119,18 +139,32 @@ export function Projects()
                                                     <div>{p.rarity}</div>
                                                 </div>
                                             </div>
-                                            <div className="italic text-xl/normal p-4 text-zinc-300 whitespace-pre-wrap">{p.description}</div>
-                                            <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-xl p-4 pt-0 pb-1">TOOLS:</div>
-                                            <div className="text-lg p-4 pt-0 flex flex-col w-full gap-0.5 text-zinc-50">
-                                            {
-                                                p.tools.map((v)=>{
-                                                    return(
-                                                    <div className="flex flex-row gap-2">
-                                                        <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/bullet.webp"}/>
-                                                        {v}
-                                                    </div>)
-                                                })
-                                            }
+                                            <div className="italic text-xl/normal tracking-wide p-4 text-zinc-300 whitespace-pre-wrap">{p.description}</div>
+                                            <div className="grid grid-cols-2">
+                                                <div>
+                                                    <div className="font-(family-name:--font-haas-grot-disp-65) text-[#5ca369] text-xl p-4 pt-0 pb-1">TOOLS:</div>
+                                                    <div className="text-lg p-4 pt-0 flex flex-col w-full gap-0.5 text-zinc-50">
+                                                    {
+                                                        p.tools.map((v)=>{
+                                                            return(
+                                                            <div className="flex flex-row gap-2">
+                                                                <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/bullet.webp"}/>
+                                                                {v}
+                                                            </div>)
+                                                        })
+                                                    }
+                                                    </div>
+                                                </div>
+                                                <div className={`${p?.prize.length == 0 && "hidden"}`}>
+                                                    <div className="font-(family-name:--font-haas-grot-disp-65) text-exotic text-xl pt-0 pb-1">AWARDS:</div>
+                                                    <ul className={`text-sm sm:text-lg w-full gap-0.5 pr-4 text-zinc-50 font-(family-name:--font-haas-grot-disp-55-roman) ${p?.prize.length == 0 && "hidden"}`}>
+                                                    {
+                                                        p.prize.map((v)=>{
+                                                            return(<li>{v}</li>)
+                                                        })
+                                                    }
+                                                    </ul>
+                                                </div>
                                             </div>
                                             <div className="bg-zinc-950 w-full flex flex-row justify-end gap-1 text-lg px-2">
                                                 <Mouse className="my-auto size-5"/>
