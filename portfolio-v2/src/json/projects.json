@@ -38,7 +38,7 @@
             "time": "9/24 - ShellHacks 2024",
             "link": "https://voiceboard.app",
             "prize": ["1st Place Google's Hack for Social Good Challenge at Shellhacks 2024"],
-            "description": "~\u00A0FIRST PLACE for Google's Hack for Social Good Challenge at Shellhacks 2024\u00A0~\nVoiceboard utilizes Google Gemini to make whiteboarding \"accessible for all\" by converting your speech to detailed, context-aware diagrams.",
+            "description": "Voiceboard utilizes Google Gemini to make whiteboarding \"accessible for all\" by converting your speech to detailed, context-aware diagrams.",
             "rarity": "Uncommon",
             "tools": ["React", "Tailwind", "TypeScript", "Google Gemini", "Mermaid", "Speech Recognition"],
             "images": [
