@@ -69,8 +69,11 @@
             "tools": ["React", "Tailwind", "TypeScript", "MySQL", "JWT", "ExpressJS", "Prisma"],
             "images": [
                 "dentracex.jpg",
-                "dentracex1.png",
-                "dentracex2.png"
+                "DenTraceX_N1.png",
+                "DenTraceX_N2.png",
+                "DenTraceX_N3.png",
+                "DenTraceX_N4.png",
+                "DenTraceX_N5.png"
             ]
         }
     ]
