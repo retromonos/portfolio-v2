@@ -66,7 +66,7 @@
             "prize": [],
             "description": "Non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains. In active production, we are authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible.",
             "rarity": "Rare",
-            "tools": ["React", "Tailwind", "TypeScript", "MySQL", "JWT", "ExpressJS", "Prisma"],
+            "tools": ["React", "Tailwind", "TypeScript", "Coolify", "Docker", "PostgreSQL", "JWT", "ExpressJS", "Prisma", "Minio S3"],
             "images": [
                 "dentracex.jpg",
                 "DenTraceX_N1.png",

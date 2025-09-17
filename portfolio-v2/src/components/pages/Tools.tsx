@@ -33,6 +33,8 @@ export const ToolInfo:{[index:string]: {image:string, fg:string, bg:string}} = {
     "Tailwind": {image:"tools/tailwindcss-mark.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "MySQL": {image:"tools/mysql-icon.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "MongoDB": {image:"tools/mongodb-icon-2.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "PostgreSQL": {image:"tools/elephant.png", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
+    "Minio S3": {image:"tools/Minio_logo_light.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "Prisma": {image:"tools/Prisma-LightSymbol.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
     "Docker": {image:"tools/docker-mark-blue.svg", fg:"text-[#61dafb]", bg:"from-zinc-100 to-zinc-300"},
     "Zx": {image:"tools/zx.svg", fg:"text-[#61dafb]", bg:"from-zinc-800 to-zinc-950"},
