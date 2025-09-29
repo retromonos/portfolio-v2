@@ -313,6 +313,23 @@
   font-display: swap;
 }
 
+::-webkit-scrollbar{
+  background-color: transparent;
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(128, 128, 128, 1);
+  height: 8px;
+  border-radius: 4px;
+}
+
 @source inline("bg-uncommon");
 @source inline("bg-rare");
 @source inline("bg-legendary");

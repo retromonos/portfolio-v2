@@ -26,7 +26,7 @@ export function Experience()
                                 <div className={`text-left flex flex-col gap-2 p-2 ${rarityColors[v.rarity] || "bg-rare"}`}>
                                     <div className={`text-left flex flex-row gap-4`}>
                                         <img className="size-18 sm:size-24 border border-zinc-700 bg-zinc-900 " src={v.logo}/>
-                                        <div className="flex flex-col justify-between gap-1 lg:gap-2 w-full overflow-x-scroll">
+                                        <div className="flex flex-col justify-between gap-1 lg:gap-2 w-full overflow-x-auto">
                                             <div className="text-2xl sm:text-4xl tracking-wide">
                                                 {v.title}
                                             </div>

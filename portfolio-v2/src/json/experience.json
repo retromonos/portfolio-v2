@@ -1,10 +1,30 @@
 {
     "jobs": [
         {
-            "name": "KnightHacks",
+            "name": "UCF Techrangers",
+            "title": "Web Developer Intern",
+            "rarity": "Exotic",
+            "description": "UCF Techrangers is an organization working under the UCF Center for Distributed Learning, which develops educational software for students and faculty across the entire University, impacting 10,000+ students annually.",
+            "time": "10/25 - Present",
+            "links": [
+                "https://techrangers.cdl.ucf.edu/"
+            ],
+            "location": "Orlando, FL",
+            "logo": "techrangers.webp",
+            "bullets": [
+                "Expected to onboard and maintain pre-existing educational solutions alongside a team of 27 developers and fellow interns.",
+                "Taking initiative to brainstorm, plan and implement new tools for University students and faculty.",
+                "Developing methods and marketing pitches to increase adoption of our tools across the University."
+            ],
+            "skills": [
+                "Teamwork", "Initiative", "Marketing", "Client Relations", "Idea Development", "Adaptability"
+            ]
+        },
+        {
+            "name": "Knight Hacks",
             "title": "Hackathon Organizer",
             "rarity": "Legendary",
-            "description": "KnightHacks is a UCF RSO for software development, which hosts a yearly hackathon, also named KnightHacks. Consistently, our hackathons have pulled 700+ people, and reach almost 100 projects submitted. From my experience volunteering and participating in various hackathons, I was brought onto the team to organize KnightHacks VIII, which will be held in October of 2025.",
+            "description": "Knight Hacks is a UCF RSO for software development, which hosts a yearly hackathon, also named KnightHacks. Consistently, our hackathons have pulled 700+ people, and reach almost 100 projects submitted. From my experience volunteering and participating in various hackathons, I was brought onto the team to organize KnightHacks VIII, which will be held in October of 2025.",
             "time": "7/25 - Present",
             "links": [
                 "https://club.knighthacks.org/"
@@ -23,7 +43,7 @@
         },
         {
             "name": "DenTraceX",
-            "title": "Lead Developer, VP",
+            "title": "Lead Developer, Vice President",
             "rarity": "Rare",
             "description": "DenTraceX is a Florida non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains. My main role as Lead Developer is the implementation of the entire organization's tech stack, such as our database, security, and client-facing webpages. While we are not active yet, we are targeting a launch by September 2025.",
             "time": "5/25 - Present",
@@ -33,9 +53,10 @@
             "location": "Orlando, FL",
             "logo": "dentracex.jpg",
             "bullets": [
-                "Assist in the incorporation and management of a non-profit organization focused on a public good.",
-                "Authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible.",
-                "Working with a team of diverse disciplines to process and handle sensitive medical information, such as outreach and design."
+                "Co-founded a non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains.",
+                "Authored a full-stack React application from scratch, using ExpressJS, PostgreSQL, as well as our own self-hosted Minio S3 bucket storage solution.",
+                "Constructed a novel code-based representation for jaw/tooth records, allowing easy searching/filtering to identify real-world human remains, intended for use by medical examiners and independent investigators.",
+                "Working with a team of diverse disciplines to process and handle sensitive medical information and maintain legal compliance."
             ],
             "skills": [
                 "Project Management", "Teamwork", "Corporation Development", "Web Development", "Server Management"

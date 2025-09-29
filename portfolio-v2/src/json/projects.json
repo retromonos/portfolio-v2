@@ -1,6 +1,19 @@
 {
     "projects": [
         {
+            "name": "VL-ADK",
+            "time": "9/25 - ShellHacks 2025",
+            "link": "https://www.youtube.com/watch?v=0t4X0DoKbsc",
+            "prize": ["1st Place NVIDIA", "2nd Place Microsoft", "3rd Place Waymo"],
+            "description": "Mimicks the functionality of a generalized VLA robotics model using a fleet of Google ADK agents, powered by NVIDIA Nemotron. Allows dynamic prompting of a cost-effective NVIDIA Jetson Orin-powered robot, achieving intelligent movement and spatial reasoning, even with extremely limited sensing capabilities.",
+            "rarity": "Uncommon",
+            "tools": ["Google ADK", "NVIDIA Jetson Orin", "NVIDIA Nemotron", "YOLO-E", "React", "FastAPI"],
+            "images": [
+                "VL_ADK_Logo.png",
+                "vl-adk1.jpg"
+            ]
+        },
+        {
             "name": "Lootcode",
             "time": "2/24 - 5/24",
             "link": "https://www.lootcode.dev",
@@ -58,23 +71,7 @@
                 "airjam.png",
                 "airjam1.png"
             ]
-        },
-        {
-            "name": "DenTraceX",
-            "time": "5/25 - Present",
-            "link": "https://www.instagram.com/dentracex/",
-            "prize": [],
-            "description": "Non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains. In active production, we are authoring a secure database from the ground up to make submitting and accessing data for medical examiners as accessible as possible.",
-            "rarity": "Rare",
-            "tools": ["React", "Tailwind", "TypeScript", "Coolify", "Docker", "PostgreSQL", "JWT", "ExpressJS", "Prisma", "Minio S3"],
-            "images": [
-                "dentracex.jpg",
-                "DenTraceX_N1.png",
-                "DenTraceX_N2.png",
-                "DenTraceX_N3.png",
-                "DenTraceX_N4.png",
-                "DenTraceX_N5.png"
-            ]
         }
+        
     ]
 }

@@ -1,6 +1,14 @@
 {
     "media": [
         {
+            "src": "media/DSC_0911.jpg",
+            "location": "ShellHacks 2025"
+        },
+        {
+            "src": "media/IMG_2853.jpg",
+            "location": "ShellHacks 2025"
+        },
+        {
             "src": "media/IMG_1314.jpg",
             "location": "Murphy, NC"
         },
@@ -63,10 +71,6 @@
         {
             "src": "media/IMG_8187.jpg",
             "location": "Also My Apartment"
-        },
-        {
-            "src": "media/IMG_8191.jpg",
-            "location": "UCF Main Campus"
         }
     ]
 }

@@ -12,7 +12,8 @@ type RarityMap = {[index:string] : string}
 export const rarityColors:RarityMap = {
     "Uncommon": "bg-uncommon",
     "Rare": "bg-rare",
-    "Legendary": "bg-legendary"
+    "Legendary": "bg-legendary",
+    "Exotic": "bg-[#aa8f2c]"
 }
 
 const xlRarityColors:RarityMap = {
@@ -52,7 +53,7 @@ export function Projects()
                                 <div id={"project"+v} onClick={()=>{if(selected != v) setSelected(v);}} className={`justify-start ${v == selected && "row-span-4 animate-expand"} ${v == selected ? "2xl:min-h-[40rem]" : "2xl:min-h-36"} ${v == selected && "2xl:order-first"} w-full bg-zinc-800 border border-b-8 outline-0 outline-offset-4 outline-zinc-700 border-b-zinc-500 hover:outline-1 border-zinc-700 font-(family-name:--font-haas-grot-disp-65) `}>
                                     <div className={`text-left flex flex-row gap-4 p-2 ${rarityColors[p?.rarity] || "bg-rare"} ${v == selected ? (xlRarityColors[p?.rarity] || "2xl:bg-rare") : (gradientRarity[p?.rarity] || "2xl:bg-zinc-800") + " 2xl:cursor-pointer 2xl:hover:from-[#7a7a7a7a] 2xl:hover:to-[#7a7a7a7a]"}`}>
                                         <img className="size-24 sm:size-32 border border-zinc-700 bg-zinc-900 " src={p.images[0]}/>
-                                        <div className="flex flex-col gap-1 sm:gap-2 w-full overflow-x-scroll">
+                                        <div className="flex flex-col gap-1 sm:gap-2 w-full overflow-x-auto">
                                             <div className="text-lg sm:text-2xl tracking-wide flex flex-row gap-2">
                                                 {p?.name}
                                                 <StarIcon id={"star"+v} className={`${p?.prize.length > 0 ? "block" : "hidden"} my-auto text-zinc-300`}/>
@@ -104,7 +105,7 @@ export function Projects()
                                                     p.tools.map((v)=>{
                                                         return(
                                                         <div className="flex flex-row gap-2">
-                                                            <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/missing.webp"}/>
+                                                            <img className="size-6 my-auto" src={ToolInfo[v] ? ToolInfo[v].image : "tools/bullet.webp"}/>
                                                             <div className="my-auto">{v}</div>
                                                         </div>)
                                                     })
