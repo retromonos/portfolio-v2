@@ -24,7 +24,7 @@ export function Information({setPage}:{setPage:(p:number)=>void})
                     <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-spin" src="star.svg"/>
                     <img className="absolute size-28 sm:size-32 lg:size-40 animate-slow-counter" src="star.svg"/>
                     <img className="absolute size-28 sm:size-32 lg:size-40" src="octogon.svg"/>
-                    <a target="_blank" href="LukeCullen_Resume10_25_2.pdf" className="absolute rounded-full size-28 sm:size-32 lg:size-40 p-8 lg:p-10 border border-crucible/50 bg-crucible/25">
+                    <a target="_blank" href="LukeCullen_Resume12_25.pdf" className="absolute rounded-full size-28 sm:size-32 lg:size-40 p-8 lg:p-10 border border-crucible/50 bg-crucible/25">
                         <img alt="Resume" className="" src="fileicon.svg"/>
                     </a>
                 </div>

@@ -1,10 +1,10 @@
 {
     "jobs": [
         {
-            "name": "UCF Techrangers",
+            "name": "CDL Techrangers",
             "title": "Web Developer Intern",
             "rarity": "Exotic",
-            "description": "UCF Techrangers is an organization working under the UCF Center for Distributed Learning, which develops educational software for students and faculty across the entire University, impacting 10,000+ students annually.",
+            "description": "Currently developing web software as a part of the CDL Techrangers, a team inside UCF which develops open-source educational software used by 100+ institutions and tens of thousands of students worldwide.",
             "time": "10/25 - Present",
             "links": [
                 "https://techrangers.cdl.ucf.edu/"
@@ -12,8 +12,8 @@
             "location": "Orlando, FL",
             "logo": "techrangers.webp",
             "bullets": [
-                "Expected to onboard and maintain pre-existing educational solutions alongside a team of 27 developers and fellow interns.",
-                "Taking initiative to brainstorm, plan and implement new tools for University students and faculty.",
+                "Deployed an open-source Flask tool for processing quiz accessibility requests on AWS EC2 servers, after rewriting 41 unit tests and refactoring the app to use Docker, as well as the latest LTI 1.3 standard, resolving over a dozen open GitHub issues.",
+                "QA tested and rewrote numerous widget components from PhP to Django in a team-wide port of our flagship product, Materia, which offers 25+ educational widgets to gamify and enhance a student’s learning experience.",
                 "Developing methods and marketing pitches to increase adoption of our tools across the University."
             ],
             "skills": [
@@ -22,9 +22,9 @@
         },
         {
             "name": "Knight Hacks",
-            "title": "Hackathon Organizer",
+            "title": "Hackathon Organizer, Developer",
             "rarity": "Legendary",
-            "description": "Knight Hacks is a UCF RSO for software development, which hosts a yearly hackathon, also named KnightHacks. Consistently, our hackathons have pulled 700+ people, and reach almost 100 projects submitted. From my experience volunteering and participating in various hackathons, I was brought onto the team to organize KnightHacks VIII, which will be held in October of 2025.",
+            "description": "Knight Hacks is a UCF RSO for software development, with the goal of empowering students to improve their technical skills and gain real experience. I helped organize the most recent hackathon, Knight Hacks VIII, which attained 900+ participants and 90% positive ratings. I also currently work as a part of our development team, resposible for our member/hacker management infrastructure, Blade, which achieved a peak of about 850 concurrent users during the event.",
             "time": "7/25 - Present",
             "links": [
                 "https://club.knighthacks.org/"
@@ -32,10 +32,9 @@
             "location": "Orlando, FL",
             "logo": "knighthacks.jpg",
             "bullets": [
-                "Working with our directing team to utilize over $60,000 worth of event funding.",
-                "Constructing an environment that provides hundreds of student hackers deadline-limited programming experience.",
-                "Assisting in logistics for a target of 1000+ people attending the event.",
-                "Planning engaging events to combat development burnout and make KnightHacks truly memorable."
+                "Authored attendance tracking systems and an accompanying management interface in React and tRPC/Node, storing valuable metrics for 60 workshop/sponsor events and 6,400+ check-in instances throughout the weekend while implementing rapid hot-fixes.",
+                "Designed new interfaces for hacker-facing dashboards and leaderboards to drive engagement, as well as enhancing the staff-side check-in interface to allow high volumes of check-ins.",
+                "Crafted React Email templates seen by 1,000+ applicants, communicating acceptance status in manner respectful to users."
             ],
             "skills": [
                 "Leadership", "Fundraising", "Event Planning", "Logistics", "Teamwork", "Budgeting"
@@ -54,7 +53,7 @@
             "logo": "dentracex.jpg",
             "bullets": [
                 "Co-founded a non-profit organization dedicated to collecting dental records of missing persons, in order to cross-reference them with unidentified remains.",
-                "Authored a full-stack React application from scratch, using ExpressJS, PostgreSQL, as well as our own self-hosted Minio S3 bucket storage solution.",
+                "Authored our organization infrastructure entirely from scratch using React, ExpressJS/Node, PostgreSQL, as well as our own self-hosted AWS-compatible S3 bucket storage solution.",
                 "Constructed a novel code-based representation for jaw/tooth records, allowing easy searching/filtering to identify real-world human remains, intended for use by medical examiners and independent investigators.",
                 "Working with a team of diverse disciplines to process and handle sensitive medical information and maintain legal compliance."
             ],
