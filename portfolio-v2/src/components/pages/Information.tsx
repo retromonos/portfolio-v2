@@ -36,7 +36,7 @@ export function Information({setPage}:{setPage:(p:number)=>void})
                 <div className="whitespace-pre-line text-2xl/11 lg:text-3xl/12 gap-4 font-(family-name:--font-haas-grot-disp-45) tracking-wider">
                     <br/>
                     <img src="Portrait.webp" className="inline float-left mr-8 size-48 outline border outline-offset-4 outline-zinc-700 border-zinc-700"/>
-                    My name is Luke Cullen, and I’m a Computer Science student minoring in Data Science at the University of Central Florida. I’m currently helping organize the next <span className="font-(family-name:--font-haas-grot-disp-65)">KnightHacks</span> hackathon, as well as developing the non-profit I helped co-found, <span className="font-(family-name:--font-haas-grot-disp-65)">DenTraceX</span>.
+                    My name is Luke Cullen, and I’m a Computer Science student minoring in Data Science at the University of Central Florida. I am currently a Web Developer Intern at a team under UCF, the CDL Techrangers. I also work as a part of the Knight Hacks developer team to help prepare our systems to run hackathons year after year, as well as developing the non-profit I co-founded, <span className="font-(family-name:--font-haas-grot-disp-65)">DenTraceX</span>.
                     <button onClick={()=>setPage(1)} className="text-xl bg-[#00000041] border border-[#c2c2c2] tracking-wide font-(family-name:--font-haas-grot-disp-55-roman) outline-0 outline-offset-4 hover:outline-1 flex flex-row text-zinc-300 w-fit p-2 gap-2">
                         <ChevronLast className="my-auto size-4 sm:size-6"/>
                         SEE EXPERIENCE
